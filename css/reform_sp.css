@@ -36,13 +36,14 @@ body {
 
 
 
-
 header,
 header.scrolled {
   width: 100%;
-  padding: 5px 10px;
+  padding: calc(5px + env(safe-area-inset-top, 0px)) 10px 5px;
   margin: 0;
+  background-color: #ffffff;
 }
+
 
 /* ヘッダー全体を2段にする */
 header .header {
@@ -924,7 +925,7 @@ header.scrolled .hari {
   max-width: none;
   height: auto;
 
-  top: -375px;
+  top: -750px;
   left: 50%;
   transform: translateX(-50%);
 }
