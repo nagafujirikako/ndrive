@@ -150,13 +150,21 @@ if ("IntersectionObserver" in window) {
 
 
 
-/* ーーーーー どんな・ペンドラ アニメーション ーーーーー */
+/* ーーーーー ペンドラ・ペンチ アニメーション ーーーーー */
 
-const donnaPendraObserver = new IntersectionObserver((entries) => {
+const toolSections = document.querySelectorAll(
+  "#donna, #contact"
+);
+
+const toolObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-      donnaPendraObserver.unobserve(entry.target);
+
+      entry.target.querySelectorAll("h2, img").forEach((element) => {
+        element.classList.add("show");
+      });
+
+      toolObserver.unobserve(entry.target);
     }
   });
 }, {
@@ -164,15 +172,9 @@ const donnaPendraObserver = new IntersectionObserver((entries) => {
   threshold: 0
 });
 
-
-document.querySelectorAll(
-  "#donna h2, #donna img"
-).forEach((element) => {
-  donnaPendraObserver.observe(element);
+toolSections.forEach((section) => {
+  toolObserver.observe(section);
 });
-
-
-
 
 /* ーーーーー 施工事例アニメーション ーーーーー */
 
