@@ -17,6 +17,19 @@ body {
   overflow: visible;
 }
 
+
+#sekou{
+  scroll-margin-top: 90px;
+}
+
+
+#aisatu{
+  scroll-margin-top: 80px;
+}
+
+#contact {
+  scroll-margin-top: 200px;
+}
   
 
 /* ===== スマホ版ヘッダー ===== */
