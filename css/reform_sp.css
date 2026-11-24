@@ -9,11 +9,11 @@ h2{
     letter-spacing: 4px;
 }
     
+html,
 body {
-  overflow-x: clip;
+  overflow-x: hidden;
+  width: 100%;
 }
-
-
 
 
   
