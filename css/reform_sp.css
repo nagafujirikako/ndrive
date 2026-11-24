@@ -41,7 +41,10 @@ header.scrolled {
   width: 100%;
   padding: calc(5px + env(safe-area-inset-top, 0px)) 10px 5px;
   margin: 0;
-  background-color: #ffffff;
+  background-color: transparent;
+box-shadow: 0 -50px 0 0 #ffffff,
+            0 3px 5px rgba(100, 60, 20, 0.45),
+            0 7px 12px rgba(100, 60, 20, 0.25);
 }
 
 
