@@ -86,7 +86,8 @@ header {
   top: 0;
   z-index: 1000;
   padding: 15px 15px 8px;
-  overflow: visible;
+ overflow-x: clip;
+overflow-y: visible;
 }
 
 
