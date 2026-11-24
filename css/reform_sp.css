@@ -9,11 +9,13 @@ h2{
     letter-spacing: 4px;
 }
     
-html,
-body {
+html {
   overflow-x: hidden;
 }
 
+body {
+  overflow: visible;
+}
 
   
 
