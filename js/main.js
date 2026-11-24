@@ -67,7 +67,7 @@ const animationObserver = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  rootMargin: "0px 0px -20% 0px",
+  rootMargin: "0px",
   threshold: 0
 });
 
@@ -160,7 +160,7 @@ const donnaPendraObserver = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  rootMargin: "0px 0px -20% 0px",
+  rootMargin: "0px",
   threshold: 0
 });
 
