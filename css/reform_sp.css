@@ -208,6 +208,10 @@ header nav a:focus-visible {
 /* ーーーーーーーーーーーーーーーーーーメインーーーーーーーーーーーーーーーーーー */
 
 
+.main-visual {
+  margin-top: -5px;
+}
+
 .main-text {
   position: absolute;
   top: 110%;
