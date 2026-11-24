@@ -42,6 +42,7 @@ header.scrolled {
   padding: calc(5px + env(safe-area-inset-top, 0px)) 10px 5px;
   margin: 0;
   background-color: transparent;
+   background-position: center calc(50% - 4px);
 box-shadow: 0 -50px 0 0 #ffffff,
             0 3px 5px rgba(100, 60, 20, 0.45),
             0 7px 12px rgba(100, 60, 20, 0.25);
@@ -59,20 +60,6 @@ header .header {
 }
 
 
-header .hari,
-header.scrolled .hari {
-  display: block;
-  content: url("../img/hari_sumaho.png");
-
-  position: absolute;
-  width: 1900px;
-  max-width: none;
-  height: auto;
-
-  top: -295px;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
 
 /* 切り替えメニューを非表示 */
