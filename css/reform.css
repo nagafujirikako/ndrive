@@ -30,8 +30,14 @@ button, input, textarea {
 
 /* ーーーーーーーーーーーーーーーーー全体ーーーーーーーーーーーーーーー */
 
+
+
 html,
 body {
+  overflow-x: clip;
+}
+
+body > :not(header) {
   overflow-x: clip;
 }
 
