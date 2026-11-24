@@ -1,0 +1,1097 @@
+
+@media screen and (max-width: 880px) {
+
+
+
+.sp-br {
+  display: inline;
+}
+
+h2{
+    font-size: 24px;
+    letter-spacing: 4px;
+}
+
+  /* ===== ヘッダー全体 ===== */
+
+  header {
+    width: 100%;
+    margin-left: 0;
+    padding: calc(6px + env(safe-area-inset-top)) 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    
+  }
+
+  header .header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 6px;
+    row-gap: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+  /* ーーーーー スマホのヘッダーの影 ーーーーー */
+
+header.shadow-only {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+  /* ===== ロゴと会社名 ===== */
+
+  header .hidari {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* PC版の縦線を消す */
+  header .hidari::after {
+    display: none;
+  }
+
+ header .logo {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+  header .logo img {
+    width: 75px;
+    height: auto;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    flex-shrink: 0;
+  }
+
+header .logo p {
+  position: absolute;
+  top: 5px;
+  left: 43px;
+  margin: 0;
+
+  font-size: 9px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+  /* ===== リフォームボタン ===== */
+
+header .kirikae {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 2px 0 0;
+  padding: 0;
+  gap: 0;
+}
+
+  /* 電気通信は非表示 */
+  header .kirikae > .kirikae2:first-child {
+    display: none;
+  }
+
+  header .kirikae > a.kirikae2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    margin: 0;
+    padding: 7px 10px;
+
+    background: white;
+    border: 1px solid #dc9720;
+    border-radius: 30px;
+
+    color: #dc9720;
+    white-space: nowrap;
+
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: none;
+  }
+
+  header .kirikae2 img {
+    width: 14px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  header .kirikae > a.kirikae2 p {
+    font-size: 10px;
+    font-weight: bold;
+    color: #dc9720;
+  }
+
+  header .kirikae > a.kirikae2:hover {
+    transform: none;
+  }
+
+  /* ===== お問い合わせボタン ===== */
+
+  header .migi {
+    display: contents;
+  }
+
+  header .btn1 {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    margin-top: 2px;
+  }
+
+  header .btn1 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 10px;
+
+    background: #dc9720;
+    color: white;
+    border: 1px solid #dc9720;
+    border-radius: 30px;
+
+    font-size: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: none;
+  }
+
+  header .btn1 a:hover {
+    transform: none;
+  }
+
+
+
+
+
+  /* ===== アンカーリンク位置調整 ===== */
+
+  section,
+  #kaisya,
+  #zigyou,
+  #zinzai,
+  #contact {
+    scroll-margin-top: 110px;
+  }
+
+
+
+
+  /* ===== ナビゲーション ===== */
+
+header nav {
+  grid-column: 1 / 4;
+  grid-row: 2;
+  width: auto;
+  margin: 0 5px 2px 80px;
+  padding: 0;
+}
+
+header nav ul {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  width: 100%;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* どんな会社？を非表示 */
+header nav li:nth-child(2) {
+  display: none;
+}
+
+header nav li {
+  position: relative;
+  min-width: 0;
+  border: none;
+  text-align: center;
+}
+
+/* 表示する4項目を4列に配置 */
+header nav li:nth-child(1) {
+  grid-column: 1;
+}
+
+header nav li:nth-child(3) {
+  grid-column: 2;
+}
+
+header nav li:nth-child(4) {
+  grid-column: 3;
+}
+
+header nav li:nth-child(5) {
+  grid-column: 4;
+}
+
+/* リンク */
+header nav a {
+  display: block;
+  width: 100%;
+  padding: 3px 0;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+  border: none;
+  transition: none;
+}
+
+/* 縦線 */
+header nav li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 13px;
+  background: #ddd;
+}
+
+/* ホバーを無効 */
+header nav a:hover,
+header nav a:focus-visible {
+  border: none;
+  transform: none;
+}
+
+/* ===== メインビジュアル ===== */
+
+.circuit-area {
+  width: 100%;
+  margin-left: 0;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background: #0b0b0b;
+}
+
+/* 下に向かって白くフェードアウト */
+.circuit-area::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(255, 255, 255, 0.3) 65%,
+    rgba(255, 255, 255, 0.8) 85%,
+    white 100%
+  );
+
+  pointer-events: none;
+}
+/* ===== メインビジュアルの文字 ===== */
+
+.circuit-area .main-text {
+  position: absolute;
+  top: 8%;
+  right: 10%;
+  left: auto;
+  bottom: auto;
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+
+  z-index: 6;
+  width: auto;
+  height: auto;
+
+  transform: none;
+  text-align: left;
+}
+
+/* 通常の文字 */
+.circuit-area .main-text p {
+  font-size: 20px;
+}
+
+/* 「確」「暮」 */
+.circuit-area .main-text .kanzi1 {
+  font-size: 30px;
+}
+
+/* 「技術」「豊」 */
+.circuit-area .main-text .kanzi2 {
+  font-size: 28px;
+}
+.circuit-area .main-text br + .kanzi1 {
+  margin-top: 10px;
+}
+
+
+/* ーーーーーー 私たち ーーーーーー */
+
+#watasi {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+  margin: 20px auto 70px;
+}
+
+/* 見出し */
+#watasi h1 {
+  font-size: clamp(24px, 6vw, 34px);
+  line-height: 1.5;
+  border-right: none;
+  border-left: 5px solid #ffb52a;
+  padding: 0 0 0 20px;
+  margin: 0 0 0 42px ;
+}
+
+/* 説明文 */
+#watasi p {
+  font-size: clamp(15px, 3vw, 20px);
+  line-height: 1.8;
+  width: fit-content;
+  max-width: 75%;
+  margin: 25px auto 0;
+  text-align: left;
+}
+
+/* ーーーーーー どんな会社 ーーーーーー */
+
+#donna {
+  position: relative;
+  width: 100%;
+  padding: 60px 20px;
+  margin-bottom: 50px;
+
+}
+
+/* 見出し */
+#donna h2 {
+  letter-spacing: 0;
+    line-height: 1.1;
+top: -4.5px;
+left: 100px;
+
+}
+
+/* ペンドラ画像 */
+#donna img {
+  width: 370px;
+  max-width: none;
+  height: auto;
+  position: absolute;
+  top: -40px;
+  left: -50px;
+  opacity: 0.8;
+}
+
+
+/* 説明文 */
+#donna p {
+    width: 85%;
+    margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 40px auto 0 30px;
+}
+
+
+/* ーーーーーー 会社概要 ーーーーーー */
+
+#kaisya {
+  width: 90%;
+  margin: 60px auto;
+  padding: 0;
+}
+
+#kaisya h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.company-table {
+  display: block;
+  width: 90%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.company-table tbody,
+.company-table tr {
+  display: block;
+  width: 100%;
+}
+
+.company-table th,
+.company-table td {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* グレーの項目名 */
+.company-table th {
+  background-color: #f2f2f2;
+  padding: 5px 15px;
+  font-weight: 500;
+}
+
+/* 白い内容 */
+.company-table td {
+  background-color: #fff;
+  padding: 5px 15px;
+  overflow-wrap: anywhere;
+}
+
+.company-table td p {
+  margin: 15px 0 0;
+}
+
+
+/* ーーーーーー 事業内容 ーーーーーー */
+
+/* 見出しの後ろ：オレンジの四角 */
+
+#zigyou h2::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 100px;
+  top: -50px;
+  left: -50px;
+  z-index: -2;
+}
+
+
+/* 見出しの後ろ：黄色の四角 */
+
+#zigyou h2::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 100px;
+  top: -10px;
+  left: -90px;
+  z-index: -1;
+}
+/* ーーーーーーーー 見出し h2 ーーーーーーーー */
+
+#zigyou h2 {
+  position: relative;
+  width: fit-content;
+  z-index: 0;
+  padding: 0 0 0 90px;
+ 
+}
+
+#zigyou h3{
+    font-size: 20px;
+    margin: 70px 0  0 120px;
+
+}
+
+#zigyou .setumei{
+    font-size: 16px;
+    margin: 5px 0 0 100px;
+}
+
+/* ーーーーーー 事業内容のカード ーーーーーー */
+
+
+#zigyou {
+  background: none;
+}
+
+
+/* カードを縦に並べる */
+#zigyou .nihon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  gap: 30px;
+  margin: 0;
+  padding: 30px 15px;
+  background: none;
+  box-shadow: none;
+}
+
+/* 白いカード2枚 */
+#zigyou .d_card,
+#zigyou .r_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 85%;
+  max-width: none;
+  min-width: 0;
+  height: 480px;
+  margin: 0;
+  padding: 35px 18px 30px;
+  background: #fffefa;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* カード下部の滑らかな波 */
+#zigyou .d_card::before,
+#zigyou .r_card::before {
+  content: none;
+}
+
+
+
+/* カード見出し */
+#zigyou .d_card h4,
+#zigyou .r_card h4 {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 0 25px;
+  padding: 0 0 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: normal;
+  writing-mode: horizontal-tb;
+  border: none;
+  gap: 12px;
+}
+
+/* 見出し下の短い黄色線 */
+#zigyou .d_card h4::after,
+#zigyou .r_card h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65px;
+  height: 4px;
+  background: #ffbd20;
+  border-radius: 10px;
+}
+
+/* アイコン */
+#zigyou .d_card h4 img,
+#zigyou .r_card h4 img {
+  display: block;
+  box-sizing: border-box;
+  width: 70px;
+  height: 70px;
+  max-width: none;
+  padding: 15px;
+  object-fit: contain;
+  background: #ffefc7;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* 説明文 */
+#zigyou .d_card p,
+#zigyou .r_card p {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.9;
+  text-align: center;
+  letter-spacing: normal;
+  writing-mode: horizontal-tb;
+}
+
+/* リフォームボタン */
+#zigyou .reform_btn {
+  position: relative;
+  z-index: 2;
+  display: block;
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 280px;
+  margin: auto auto 0;
+  padding: 14px 10px;
+  background: linear-gradient(#444, #111);
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  font-size: 13px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: normal;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+#zigyou .nihon::before {
+  content: none;
+}
+
+
+
+/* ーーーーーーーーーーーーー 人材募集 ーーーーーーーーーーー */
+
+
+#zinzai {
+  width: 100%;
+  margin-top: 120px;
+}
+
+/* 見出し */
+#zinzai h2 {
+  position: relative;
+  width: fit-content;
+  margin: 0 0 80px;
+  padding-left: 90px;
+  z-index: 0;
+}
+
+/* 見出し後ろのオレンジ */
+#zinzai h2::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 100px;
+  top: -50px;
+  left: -50px;
+  z-index: -2;
+}
+
+/* 見出し後ろの黄色 */
+#zinzai h2::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 100px;
+  top: -10px;
+  left: -90px;
+  z-index: -1;
+}
+
+/* ーーーーーー 募集文章 ーーーーーー */
+
+/* 文章のかたまりを中央に配置 */
+#zinzai > div:first-of-type {
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* 文章共通：左揃え */
+#zinzai > div:first-of-type > p {
+  width: 100%;
+  margin: 0;
+  font-size: 15px;
+  line-height: 2;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+/* 最初の募集文章 */
+#zinzai > div:first-of-type > p:nth-child(1) {
+  margin: 0 0 25px;
+}
+
+/* サポートについての文章 */
+#zinzai > div:first-of-type > p:nth-child(2) {
+  margin: 0 0 45px;
+}
+
+/* 応募連絡（メール） */
+#zinzai > div:first-of-type > p:nth-child(3) {
+  margin: 0 0 15px;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* または（電話） */
+#zinzai > div:first-of-type > p:nth-child(4) {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* メール・電話リンク */
+#zinzai p a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 100%;
+  padding-bottom: 4px;
+
+  font-family: sans-serif;
+  font-size: 13px;
+  letter-spacing: 0;
+
+  border-bottom: 2px solid #ffb52a;
+  overflow-wrap: anywhere;
+}
+
+/* メール・電話アイコン */
+#zinzai p a img {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+
+
+/* 応募連絡（メール） */
+#zinzai > div:first-of-type > p:nth-child(3) {
+  
+  margin: 0 0 10px 30px;
+  font-size: 14px;
+}
+
+/* または（電話） */
+#zinzai > div:first-of-type > p:nth-child(4) {
+ 
+  margin: 0 0 70px 30px;
+  font-size: 14px;
+}
+
+/* ーーーーーー 左右の矢印 ーーーーーー */
+
+
+
+
+/* スライダー全体 */
+#zinzai .event-slider {
+  position: relative;
+  gap: 0;
+}
+
+/* 左右の矢印 */
+#zinzai .yazirusi {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+   width: 25px;
+  height: 25px;
+  font-size: 15px;
+}
+
+/* 左矢印 */
+#zinzai .yazirusi:first-child {
+  left: 10px;
+}
+
+/* 右矢印 */
+#zinzai .yazirusi:last-child {
+  right: 10px;
+}
+
+/* 写真を横幅いっぱいに */
+#zinzai .event-swiper {
+  width: 90%;
+  max-width: 100%;
+}
+
+
+#zinzai .yazirusi:hover {
+  transform: translateY(-50%);
+  opacity: 1;
+}
+/* ーーーーーー 写真下のコメント ーーーーーー */
+
+#zinzai .event-caption {
+ font-size: 13px;
+ font-weight: bold;
+
+}
+/* ーーーーーー 左右のオレンジ線 ーーーーーー */
+
+#zinzai .event-caption::before,
+#zinzai .event-caption::after {
+  
+  width: 30px;
+ 
+  
+}
+
+
+
+
+/* ーーーーーー お問い合わせ ーーーーーー */
+
+/* セクション全体 */
+#contact {
+  position: relative;
+  width: 100%;
+  margin-top: 70px;
+  padding: 120px 0 70px;
+}
+
+/* お問い合わせ見出し */
+#contact h2 {
+  position: absolute;
+  top: 102px;
+  left: 50px;
+  z-index: 3;
+  width: fit-content;
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+/* ペンチ画像 */
+#contact > img {
+  position: absolute;
+  top: -31px;
+  left: -50px;
+  z-index: 0;
+  opacity: 0.8;
+  width: 430px;
+  max-width: none;
+  height: auto;
+  transform: rotate(-2deg);
+}
+
+/* フォーム全体 */
+#contact .contact-form {
+  z-index: 2;
+  width: 80%;
+  max-width: 500px;
+  margin: 60px auto 0;
+}
+
+/* 各入力項目 */
+#contact .form-item {
+  margin-bottom: 16px;
+}
+
+/* 項目名 */
+#contact .form-item > label {
+  display: block;
+  margin-bottom: 8px;
+  padding-left: 10px;
+
+  font-size: 14px;
+  border-left: 4px solid #ffb52a;
+}
+
+/* 必須表示 */
+#contact .required {
+  font-size: 11px;
+}
+
+/* 入力欄 */
+#contact .form-item input,
+#contact .form-item textarea {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+/* お問い合わせ内容 */
+#contact .form-item textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+/* 個人情報の注意書き */
+#contact .privacy {
+  margin: 25px 0 0;
+  padding: 15px;
+}
+
+#contact .privacy p {
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* 送信ボタン */
+#contact .submit-btn {
+  width: 80%;
+  max-width: 250px;
+  height: 48px;
+  margin: 40px auto 0;
+
+  font-size: 15px;
+  letter-spacing: 4px;
+}
+
+/* スマホではホバーの動きを消す */
+#contact .submit-btn:hover {
+  transform: none;
+}
+
+
+
+
+
+
+
+/* ーーーーーー フッター ーーーーーー */
+
+/* フッター全体 */
+footer {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  padding: 170px 20px 30px;
+
+  background-color: #0b0b0b;
+  color: white;
+  overflow: hidden;
+}
+
+/* 上側のグラデーション */
+footer::before {
+  height: 60%;
+}
+footer .sen {
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  overflow: visible;
+}
+
+footer .sen svg {
+  overflow: visible;
+}
+
+/* スマホの配線の太さ */
+footer .orenzi path {
+  stroke-width: 8px;
+}
+
+/* 左側の回路だけ下げる */
+footer .orenzi path:first-child,
+footer .hikari-orenzi path:first-child,
+footer .footer-endpoints path:first-child,
+footer .footer-extra-squares rect:first-child {
+  transform: translate(-75px, 68px);
+}
+
+footer .hikari-orenzi path {
+  stroke-width: 7px;
+}
+
+/* 流れる光の太さも統一 */
+footer .hikari-orenzi path {
+  stroke-width: 4px;
+  vector-effect: non-scaling-stroke;
+}
+
+/* 流れる光 */
+footer .hikari-siro path,
+footer .hikari-orenzi path {
+  stroke-width: 8;
+}
+
+/* Ndriveロゴ */
+footer .rogo {
+  position: relative;
+  z-index: 2;
+
+  width: 150px;
+  height: auto;
+  margin: 0 auto 35px;
+}
+
+/* Nドラくん */
+footer .dora {
+  position: absolute;
+  z-index: 3;
+
+  width: 90px;
+  height: auto;
+
+  top: 54px;
+  right: 18%;
+}
+
+/* 会社情報 */
+footer .zyouhou {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 住所・電話番号 */
+footer .zyouhou p {
+  width: 100%;
+  margin: 0;
+
+  font-size: 11px;
+  line-height: 1.8;
+  letter-spacing: 0;
+
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* コピーライト */
+footer .copyright {
+  position: relative;
+  z-index: 3;
+
+  margin-top: 35px;
+
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+
+
+}

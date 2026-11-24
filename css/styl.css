@@ -1,0 +1,1852 @@
+
+/* ーーーーーーーーーーーーリセットーーーーーーーーーーーーーーーーーーーーーー */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+/* --------------全体ーーーーーーーーーーーーーーーーーーーー */
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+#kaisya,
+#zigyou,
+#zinzai {
+  scroll-margin-top: 170px;
+}
+
+/* ペンチの上に見出しがあるお問い合わせ */
+
+#contact {
+  scroll-margin-top: 120px;
+}
+
+
+
+body{
+  max-width: 1400px;
+  margin:  0 auto;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+h2{
+  font-size: 30px;
+}
+.sp-br {
+  display: none;
+}
+
+/* ーーーーーーーーーーーーーーーーーーーヘッダーーーーーーーーーーーーーーーーーーーーー */
+
+
+header{
+  width: 100vw;
+    margin-left: calc(50% - 50vw);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  transition: box-shadow 0.3s ease;
+padding: 10px 15px 8px ;
+}
+
+header.scrolled {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+header .header{
+ max-width: 1600px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto ;
+  font-family: sans-serif;
+}
+
+
+header .logo{
+  margin: 0 10px 0 30px;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .logo img {
+  width: 90px;
+  height: auto;
+}
+
+header .logo p{
+  font-size: 16px;
+}
+
+header .logo {
+  transition: transform 0.3s ease;
+}
+
+header .logo:hover {
+
+  opacity: 0.6;
+}
+
+header .hidari {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-right: 15px;
+  margin-right: 0;
+}
+
+header .hidari::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  border-right: 1px solid #ccc;
+}
+
+header .kirikae > .kirikae2:first-child{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  
+}
+
+header .kirikae > .kirikae2 p{
+ 
+    letter-spacing: 6px;
+}
+header .kirikae > a.kirikae2 p {
+  letter-spacing: 0;
+}
+
+
+header .kirikae2{
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding-left: 15px;
+  gap: 7px;
+}
+
+header .kirikae{
+    display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
+header .kirikae2 img {
+  width:35px;
+  height: auto;
+}
+
+header .kirikae2 p {
+  font-size: 16px;
+}
+
+header .kirikae a p {
+  color: #dc9720;
+}
+
+header .kirikae a  {
+  transition: transform 0.2s ease;
+}
+
+header .kirikae a:hover {
+  transform: translateX(7px);
+}
+
+header nav ul{
+  display: flex;
+   align-items: center;
+  gap: 30px;
+}
+header nav a {
+  display: inline-block;
+
+  border-bottom: 3px solid transparent;
+ font-size: 20px;
+}
+
+header nav a:hover {
+  border-bottom-color: orange;
+}
+
+
+
+header .migi {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: auto;
+  margin: auto 20px 10px auto;
+  gap: 25px;
+    transform: translateY(7px);
+}
+
+header .btn1 a {
+  letter-spacing: ;
+  display: inline-block;
+  background: linear-gradient(
+    to bottom,
+    #ffcc70 0%,
+    #ffb52a 45%,
+    #ffb52a 100%
+  );
+  color: white;
+  padding: 10px 40px;
+  border-radius: 30px;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.25),
+    inset 0 2px 3px rgba(255, 255, 255, 0.6);
+    
+}
+
+header .btn1 a:hover {
+  transform: translateY(2px) scale(0.97);
+}
+
+
+
+
+/* =========================
+   スクロール時のヘッダー
+========================= */
+
+/* なめらかに変化 */
+header {
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+header .logo img,
+header .logo p,
+header .migi,
+header nav a,
+header .btn1 a {
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   ヘッダー全体
+========================= */
+
+header.scrolled {
+  padding: 5px 15px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   ロゴ・社名
+========================= */
+
+/* ロゴと社名を横並び */
+header.scrolled .logo {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin: 0 40px;
+}
+
+/* ロゴ画像 */
+header.scrolled .logo img {
+  width: 65px;
+  margin-top: -2px;
+}
+
+/* 社名 */
+header.scrolled .logo p {
+  font-size: 16px;
+  margin-top: 10px;
+  white-space: nowrap;
+}
+
+/* ロゴ右側の縦線を消す */
+header.scrolled .hidari::after {
+  display: none;
+}
+
+/* =========================
+   電気通信・リフォーム切り替え
+========================= */
+
+header.scrolled .kirikae {
+  display: none;
+}
+
+/* =========================
+   ナビ・お問い合わせ
+========================= */
+
+/* 横並び */
+header.scrolled .migi {
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  margin: 0 20px 0 auto;
+  transform: none;
+}
+
+/* ナビを左 */
+header.scrolled nav {
+  order: 1;
+  margin-top: 18px;
+}
+
+/* お問い合わせを右 */
+header.scrolled .btn1 {
+  order: 2;
+}
+
+/* ナビ文字 */
+header.scrolled nav a {
+  font-size: 16px;
+}
+
+/* ナビ同士の間隔 */
+header.scrolled nav ul {
+  gap: 25px;
+}
+
+/* お問い合わせボタン */
+header.scrolled .btn1 a {
+  font-size: 13px;
+  padding: 6px 20px;
+  letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+/* ーーーーーーーーーーメインビジュアル文字ーーーーーーーーーーーー */
+
+.main-text {
+  position: absolute;
+  top: 45%;
+  right: 15%;
+  transform: translateY(-50%);
+  z-index: 2;
+  text-align: center;
+    
+}
+
+.main-text p {
+  color: white;
+  font-size: 30px;
+  letter-spacing: 4px;
+}
+
+.main-text .kanzi1{
+font-size: 40px;  
+}
+
+.main-text .kanzi2 {
+  color: #ffb52a;
+  font-size: 41px;
+}
+
+
+
+/* ーーーーーー 回路全体 ーーーーーー */
+
+.circuit-area {
+  width: 100vw;
+  aspect-ratio: 1120 / 413;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #0b0b0b;
+  margin-left: calc(50% - 50vw);
+}
+.circuit-area::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background: linear-gradient(
+    to bottom,
+    transparent 70%,
+    white 100%
+  );
+  pointer-events: none;
+}
+
+
+
+.circuit {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ーーーーーー 回路の線 ーーーーーー */
+
+.wire path {
+  fill: none;
+  stroke-width: 11;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+
+  animation: drawLine 3s ease forwards;
+}
+
+/* 白い線 */
+
+.wire.white path {
+  stroke: #f7f5ef;
+}
+
+/* 黄色い線 */
+
+.wire.gold path {
+  stroke: #ffb52a;
+}
+
+/* 黄色い線は少し遅れて伸びる */
+
+.wire.later path {
+  animation-delay: 0.5s;
+}
+
+
+/* 線が伸びるアニメーション */
+
+@keyframes drawLine {
+  from {
+    stroke-dashoffset: 1;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/* ーーーーーー 流れる光 ーーーーーー */
+
+.light path {
+  fill: none;
+  stroke: #fff4c7;
+  stroke-width: 7;
+  stroke-linecap: round;
+
+  stroke-dasharray: 0.035 0.965;
+  stroke-dashoffset: 1;
+
+  opacity: 0;
+  filter: url(#glow);
+
+  animation: lightFlow 3s linear 3.5s infinite;
+}
+
+/* 白い回路の光 */
+
+.white-light path {
+  stroke: #ffffff;
+  stroke-width: 5;
+  animation-delay: 4s;
+}
+
+
+/* 光が線の上を走る */
+
+@keyframes lightFlow {
+  0% {
+    stroke-dashoffset: 1;
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+
+/* ーーーーーー 四角と点々 ーーーーーー */
+
+/* 最初は非表示 */
+
+.node {
+  opacity: 0;
+  animation: nodeAppear 0.7s ease 3.2s forwards;
+}
+
+/* 回路が完成したあと表示 */
+
+@keyframes nodeAppear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* ーーーーーー 四角い光の点滅 ーーーーーー */
+
+.pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+
+  animation: pulseLight 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulseLight {
+  0% {
+    opacity: 0.35;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
+
+
+
+/* ーーーーーーーーーーーーーー私たちーーーーーーーーーーーー */
+
+
+#watasi{
+  display: flex;
+  justify-content: center;
+  max-width: 90%;
+  margin: 100px auto 30px auto;
+  
+}
+
+#watasi h1{
+border-right: 3px solid #ffb52a;
+padding: 10px 20px 10px 0;
+font-size: 40px;
+}
+
+#watasi p{
+  margin: auto 0 auto 40px;
+  font-size: 21px;
+ 
+}
+
+
+/* ーーーーーーーーーーーーどんな会社ーーーーーーーーーーー */
+
+
+#donna{
+position: relative;
+  padding: 100px;
+  margin-bottom: 100px;
+}
+
+#donna h2{
+  font-size: 26px;
+  position: absolute;
+  top: 103px;
+  left: 200px;
+  color: white;
+  z-index: 100;
+}
+
+#donna p{
+
+  max-width: 90%;
+  margin: 160px auto 0 auto;
+  padding-left: 50px;
+  font-size: 22px;
+
+}
+
+#donna img{
+  position: absolute;
+  top: 0;
+  left: -71px;
+  width: 700px;
+}
+
+/* ーーーーーーーーーー会社概要ーーーーーーーーーーーーーーーー */
+
+
+
+/* セクション全体 */
+#kaisya {
+  max-width: 1000px;
+  margin:  auto;
+}
+
+/* 見出し */
+#kaisya h2 {
+  position: relative;
+  width: fit-content;
+  margin: 0 0 50px 50px;
+  z-index: 0;
+  margin-bottom: 100px;
+}
+
+/* 見出しの後ろ：オレンジの四角 */
+#kaisya h2::before {
+  content: "";
+  position: absolute;
+  width: 1000px;
+  height: 100px;
+  background-color: #ffb52a;
+  top: -50px;
+  left: -800px;
+  z-index: -1;
+  opacity: 40%;
+}
+
+/* 見出しの後ろ：黄色の四角 */
+#kaisya h2::after {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 100px;
+  background-color: #ffe222;
+  top: -10px;
+  left: -170px;
+  z-index: -1;
+  opacity: 30%;
+
+}
+
+/* 表全体 */
+.company-table {
+  width: 90%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+}
+
+/* 表の各セル */
+.company-table th,
+.company-table td {
+  padding: 15px 25px;
+  border: 1px solid #ccc;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* 左側の項目名 */
+.company-table th {
+  width: 30%;
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+/* 右側の内容 */
+.company-table td {
+  width: 70%;
+  line-height: 1.8;
+}
+
+/* 所在地の2つ目の住所 */
+.company-table td p {
+  margin-top: 20px;
+}
+
+
+/* ーーーーーーーーーー事業内容ーーーーーーーーーーーーーーーーー */
+
+
+#zigyou {
+  margin-top: 150px;
+}
+
+
+/* ーーーーーーーー 見出し h2 ーーーーーーーー */
+
+#zigyou h2 {
+  position: relative;
+  width: fit-content;
+  z-index: 0;
+  padding: 0 0 0 200px;
+}
+
+
+/* 見出しの後ろ：オレンジの四角 */
+
+#zigyou h2::before {
+  content: "";
+  position: absolute;
+  width: 1000px;
+  height: 100px;
+  background-color: #ffb52a;
+  top: -50px;
+  left: -600px;
+  z-index: -1;
+  opacity: 40%;
+}
+
+
+/* 見出しの後ろ：黄色の四角 */
+
+#zigyou h2::after {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 100px;
+  background-color: #ffe222;
+  top: -10px;
+  left: 10px;
+  z-index: -1;
+  opacity: 30%;
+}
+
+
+/* ーーーーーーーー 小見出し h3 ーーーーーーーー */
+
+#zigyou h3 {
+  margin: 80px  0 0;
+  font-size: 25px;
+  text-align: center;
+}
+
+
+/* ーーーーーーーー 説明文 ーーーーーーーー */
+
+#zigyou .setumei {
+  margin: 10px 0 0 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+/* ーーーーーーーー カード全体 ーーーーーーーー */
+
+
+
+/* カード全体 */
+#zigyou .nihon {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto 0;
+  padding: 30px 20px;
+
+
+}
+
+
+
+/* 白いカード2枚 */
+#zigyou .d_card,
+#zigyou .r_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  flex: 1;
+  min-width: 0;
+  min-height: 480px;
+
+  margin: 0;
+  padding: 45px 30px 35px;
+
+  background: #fffefa;
+  border: none;
+  border-radius: 25px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* カード見出し */
+#zigyou .nihon h4 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  width: 100%;
+  margin: 0;
+  padding: 0 0 25px;
+
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+
+  border: none;
+}
+
+/* 見出し下の短い黄色ライン */
+#zigyou .nihon h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 70px;
+  height: 4px;
+
+  background: #ffbd20;
+  border-radius: 10px;
+}
+
+/* アイコンを黄色い丸で囲む */
+#zigyou .nihon h4 img {
+  display: block;
+  width: 85px;
+  height: 85px;
+  max-width: none;
+  padding: 19px;
+
+  object-fit: contain;
+  background: #ffefc7;
+  border-radius: 50%;
+
+  flex-shrink: 0;
+}
+
+/* カード説明文 */
+#zigyou .nihon p {
+  width: 100%;
+  margin: 30px 0 50px;
+  padding: 0;
+
+  font-family: "Shippori Mincho", serif;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+/* リフォームボタン */
+#zigyou .reform_btn {
+  display: block;
+  width: 90%;
+  max-width: 280px;
+
+  margin: auto auto 10px;
+  padding: 15px 20px;
+
+  font-family: sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+
+  color: white;
+  background: linear-gradient(
+    to bottom,
+    #666 0%,
+    #333 40%,
+    #111 60%,
+    #000 100%
+  );
+
+  border: none;
+  border-radius: 40px;
+
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.25),
+    inset 0 2px 3px rgba(255, 255, 255, 0.4);
+
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+
+
+/* ーーーーーーーー ボタンホバー ーーーーーーーー */
+
+.reform_btn:hover {
+  transform: translateY(2px) scale(0.97);
+
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+/* ーーーーーーーーーーーーー人材募集ーーーーーーーーーーーーーーーーーーー */
+
+#zinzai {
+  margin-top: 150px;
+}
+
+
+/* ーーーーーーーー 見出し ーーーーーーーー */
+
+#zinzai h2 {
+  position: relative;
+  width: fit-content;
+  margin: 0 0 100px 50px;
+  z-index: 0;
+  padding-left: 110px;
+}
+
+
+/* 見出しの後ろ：オレンジの四角 */
+
+#zinzai h2::before {
+  content: "";
+  position: absolute;
+  width: 1000px;
+  height: 100px;
+  background-color: #ffb52a;
+  top: -50px;
+  left: -700px;
+  z-index: -1;
+  opacity: 40%;
+}
+
+
+/* 見出しの後ろ：黄色の四角 */
+
+#zinzai h2::after {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 100px;
+  background-color: #ffe222;
+  top: -10px;
+  left: -50px;
+  z-index: -1;
+  opacity: 30%;
+}
+
+
+/* ーーーーーーーー 文章 ーーーーーーーー */
+
+
+#zinzai p,#zinzai a{
+  font-size: 20px;
+}
+
+#zinzai > div:first-of-type {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+
+#zinzai > div:first-of-type > p:nth-child(1) {
+  margin: 0 auto 30px -60px;
+  line-height: 1.6;
+}
+
+
+#zinzai > div:first-of-type > p:nth-child(2) {
+  margin: 0 auto 0 30px;
+}
+
+
+#zinzai > div:first-of-type > p:nth-child(3) {
+  width: fit-content;
+  margin: 80px auto 0 200px;
+}
+
+
+#zinzai > div:first-of-type > p:nth-child(4) {
+  width: fit-content;
+  margin: 7px auto  80px 218px;
+}
+
+
+/* ーーーーーーーー メール・電話リンク ーーーーーーーー */
+
+#zinzai p a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  font-family: sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+
+  color: inherit;
+  text-decoration: none;
+
+  border-bottom: 2px solid #ffb52a;
+  padding-bottom: 5px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* ーーーーーーーー アイコン ーーーーーーーー */
+
+#zinzai p a img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+
+  transition: transform 0.25s ease;
+}
+
+
+/* ーーーーーーーー ホバー ーーーーーーーー */
+
+#zinzai p a:hover {
+  transform: translateY(3px) scale(0.96);
+  color: #dc9720;
+  opacity: 0.8;
+}
+
+
+
+
+/* ーーーーーー スライダー全体 ーーーーーー */
+
+#zinzai .event-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+
+  margin: 20px auto 0;
+  padding: 0;
+}
+
+
+/* ーーーーーー 写真表示部分 ーーーーーー */
+
+#zinzai .event-swiper {
+  width: 460px;
+  min-width: 0;
+  height: auto;
+
+  margin: 0;
+  
+
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+#zinzai .event-swiper {
+  width: 460px;
+  min-width: 0;
+  height: fit-content;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+#zinzai .swiper-slide {
+  height: auto;
+}
+
+/* ーーーーーー 写真下のコメント ーーーーーー */
+
+#zinzai .event-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  width: fit-content;
+  margin: 25px auto 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+/* ーーーーーー 左右のオレンジ線 ーーーーーー */
+
+#zinzai .event-caption::before,
+#zinzai .event-caption::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #ffb52a;
+}
+
+/* ーーーーーー 左右の矢印 ーーーーーー */
+
+#zinzai .yazirusi {
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+
+  margin: 0;
+  padding: 0;
+
+  border: 2px solid rgb(141, 140, 140);
+  border-radius: 50%;
+
+  background-color: rgb(160, 159, 159);
+  color: white;
+
+  font-size: 18px;
+font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+#zinzai .swiper-pagination {
+  position: relative;
+  bottom: auto;
+  margin-top: 10px;
+}
+
+/* 点々の色 */
+#zinzai .event-swiper {
+  --swiper-pagination-color: #ffb52a;
+  --swiper-pagination-bullet-inactive-color: #cccccc;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+}
+
+
+
+
+/* ーーーーーー ホバー ーーーーーー */
+
+#zinzai .yazirusi:hover {
+  opacity: 0.7;
+  transform: translateY(3px) scale(0.96);
+
+}
+
+
+
+
+/* ーーーーーーーー お問い合わせ ーーーーーーーー */
+
+#contact {
+  position: relative;
+  margin-top: 150px;
+  padding: 60px 0 120px;
+}
+
+/* ーーーーーーーー 見出し ーーーーーーーー */
+
+#contact h2 {
+  position: absolute;
+  top: 20px;
+  left: 190px;
+  z-index: 3;
+
+  width: fit-content;
+  color: white;
+}
+
+/* ーーーーーーーー ペンチ ーーーーーーーー */
+
+#contact img {
+  position: absolute;
+  top: -200px;
+  left: 90px;
+  z-index: 0;
+
+  width: 700px;
+  height: auto;
+}
+
+/* ーーーーーーーー フォーム全体 ーーーーーーーー */
+
+#contact .contact-form {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 500px;
+
+  margin: 100px auto;
+}
+
+/* ーーーーーーーー 各入力項目 ーーーーーーーー */
+
+#contact .form-item {
+  margin-bottom: 20px;
+}
+
+/* ーーーーーーーー 項目名 ーーーーーーーー */
+
+#contact .form-item > label {
+  display: block;
+
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+
+  margin-bottom: 8px;
+  padding-left: 10px;
+
+  border-left: 4px solid #ffb52a;
+
+  /* 黒い文字に白い縁取り */
+  text-shadow:
+    -1px -1px 0 white,
+     1px -1px 0 white,
+    -1px  1px 0 white,
+     1px  1px 0 white,
+     0 0 5px white;
+}
+
+/* ーーーーーーーー 必須表示 ーーーーーーーー */
+
+#contact .required {
+  font-family: sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #222;
+
+  /* 必須の文字にも白い縁取り */
+  text-shadow:
+    -2px -2px 0 white,
+     2px -2px 0 white,
+    -2px  2px 0 white,
+     2px  2px 0 white,
+     0 0 5px white;
+}
+
+/* ーーーーーーーー 入力欄 ーーーーーーーー */
+
+#contact .form-item input,
+#contact .form-item textarea {
+  display: block;
+  box-sizing: border-box;
+
+  width: 100%;
+  padding: 12px 15px;
+
+  border: 1px solid #888;
+  border-radius: 6px;
+
+  background-color: #f8f8f8;
+  color: #222;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  transition: border-color 0.25s ease;
+}
+
+/* ーーーーーーーー 入力欄を選択したとき ーーーーーーーー */
+
+#contact .form-item input:focus,
+#contact .form-item textarea:focus {
+  outline: none;
+  border-color: #ffb52a;
+}
+
+/* ーーーーーーーー お問い合わせ内容 ーーーーーーーー */
+
+#contact .form-item textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* ーーーーーーーー 個人情報の注意書き ーーーーーーーー */
+
+#contact .privacy {
+  margin: 20px 0 15px;
+  padding: 12px 15px;
+
+  background-color: #f5f5f5;
+  border-left: 3px solid #ffb52a;
+  border-radius: 4px;
+}
+
+#contact .privacy p {
+  margin: 0;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+
+/* ーーーーーー 送信ボタン ーーーーーー */
+
+#contact .submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 250px;
+  height: 48px;
+  margin: 60px auto 0;
+
+  border: none;
+  border-radius: 30px;
+
+  background: linear-gradient(
+    to bottom,
+    #ffcc70 0%,
+    #ffb52a 45%,
+    #ffb52a 100%
+  );
+
+  color: white;
+  font-family: sans-serif;
+  font-size: 16px;
+  letter-spacing: 6px;
+
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.25),
+    inset 0 2px 3px rgba(255, 255, 255, 0.6);
+
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+
+/* ーーーーーー ホバーで押す動き ーーーーーー */
+
+#contact .submit-btn:hover {
+  transform: translateY(3px) scale(0.97);
+}
+
+
+
+
+
+/* ーーーーーーーー フッター ーーーーーーーー */
+
+
+
+footer {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  padding: 190px 30px 30px;
+  box-sizing: border-box;
+
+  background-color: #0b0b0b;
+  color: white;
+  overflow: visible;
+}
+
+/* ーーーーーーーー 上側グラデーション ーーーーーーーー */
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  z-index: 1;
+
+  background: linear-gradient(
+    to bottom,
+    white 0%,
+    rgba(255, 255, 255, 0.98) 10%,
+    rgba(255, 255, 255, 0.85) 25%,
+    rgba(255, 255, 255, 0.55) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 100%
+  );
+
+  pointer-events: none;
+}
+
+/* ーーーーーーーー 回路全体 ーーーーーーーー */
+
+footer .sen {
+  position: absolute;
+
+  /* 回路を40px下げる */
+  top: 40px;
+  left: 0;
+
+  width: 100%;
+  height: 260px;
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+footer .sen svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+footer .sen .siro path,
+footer .sen .orenzi path,
+footer .sen .hikari-siro path,
+footer .sen .hikari-orenzi path {
+  vector-effect: non-scaling-stroke;
+}
+
+/* ーーーーーーーー 白い配線 ーーーーーーーー */
+
+footer .siro path {
+  fill: none;
+  stroke: #f7f5ef;
+  stroke-width: 6px;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+
+  animation: footerSen 1s ease forwards;
+}
+
+/* ーーーーーーーー オレンジの配線 ーーーーーーーー */
+footer .orenzi path {
+  fill: none;
+  stroke: #ffb52a;
+  stroke-width:8px;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+
+  animation: footerSen 1s ease 0.2s forwards;
+}
+/* 回路が伸びるアニメーション */
+
+@keyframes footerSen {
+  from {
+    stroke-dashoffset: 1;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ーーーーーーーー 流れる光 ーーーーーーーー */
+
+footer .hikari-siro path,
+footer .hikari-orenzi path {
+  fill: none;
+  stroke-width: 7;
+  stroke-linecap: round;
+
+  stroke-dasharray: 3.5 96.5;
+  stroke-dashoffset: 100;
+
+  opacity: 0;
+  filter: url(#footerGlow);
+
+  animation: footerHikari 3s linear 1s infinite;
+}
+
+/* 白い光 */
+
+footer .hikari-siro path {
+  stroke: #ffffff;
+  stroke-width: 5;
+  animation-delay: 1.2s;
+}
+
+/* オレンジの光 */
+
+footer .hikari-orenzi path {
+  stroke: #fff4c7;
+}
+
+/* 光が流れるアニメーション */
+
+@keyframes footerHikari {
+  0% {
+    stroke-dashoffset: 100;
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+/* ーーーーーーーー 回路先端の四角 ーーーーーーーー */
+
+
+/* 四角本体 */
+
+footer .sikaku-hontai rect {
+  opacity: 1;
+  animation: none;
+}
+
+/* 四角の後ろの発光 */
+
+footer .pika {
+  filter: blur(8px);
+  opacity: 0.2;
+  animation: footerPika 2s ease-in-out infinite alternate;
+}
+
+@keyframes footerPika {
+  from {
+    opacity: 0.2;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ーーーーーーーー 追加した四角 ーーーーーーーー */
+
+footer .footer-extra-squares rect {
+  opacity: 0.9;
+  animation: footerExtraGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes footerExtraGlow {
+  from {
+    opacity: 0.35;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ーーーーーーーー オレンジの点々 ーーーーーーーー */
+
+footer .footer-dots rect {
+  fill: #ffb52a;
+  opacity: 0.9;
+}
+
+/* ーーーーーーーー 白い点々 ーーーーーーーー */
+
+footer .footer-dots-white rect {
+  fill: white;
+  opacity: 0.85;
+}
+
+/* ーーーーーーーー Ndriveロゴ ーーーーーーーー */
+
+footer .rogo {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+  width: 160px;
+  height: auto;
+
+  margin: 0 auto 25px;
+}
+
+/* ーーーーーーーー Nドラくん ーーーーーーーー */
+
+footer .dora {
+  position: absolute;
+  z-index: 2;
+
+  width: 120px;
+  height: auto;
+
+  right: 7%;
+  top: -14px;
+}
+
+/* ーーーーーーーー 会社情報 ーーーーーーーー */
+
+footer .zyouhou {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 40px;
+}
+
+footer .zyouhou p {
+  margin: 0;
+
+  font-family: "Shippori Mincho", serif;
+  font-size: 12px;
+  line-height: 1.8;
+  white-space: nowrap;
+}
+
+/* ーーーーーーーー コピーライト ーーーーーーーー */
+
+footer .copyright {
+  position: relative;
+  z-index: 3;
+
+  margin-top: 20px;
+  text-align: center;
+
+  font-family: sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #aaa;
+}
+
+
+
+
+
+
+
+
+/* ーーーーーー スクロールアニメーション ーーーーーー */
+
+
+/* =========================
+   見出し
+========================= */
+
+/* 四角の初期状態 */
+:is(#kaisya, #zigyou, #zinzai) h2::before,
+:is(#kaisya, #zigyou, #zinzai) h2::after {
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+/* 文字の初期状態 */
+:is(#kaisya, #zigyou, #zinzai) h2 span {
+  opacity: 0;
+}
+
+/* オレンジの四角 */
+:is(#kaisya, #zigyou, #zinzai) h2.show::before {
+  animation: barGrow 0.8s ease-out forwards;
+}
+
+/* 黄色の四角 */
+:is(#kaisya, #zigyou, #zinzai) h2.show::after {
+  animation: barGrow 0.7s ease-out 0.25s forwards;
+}
+
+/* 文字 */
+:is(#kaisya, #zigyou, #zinzai) h2.show span {
+  animation: titleFade 0.5s ease 0.65s forwards;
+}
+
+@keyframes barGrow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes titleFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* =========================
+   ペンドラ・ペンチ
+========================= */
+
+#donna img,
+#contact img {
+  clip-path: inset(0 100% 0 0);
+}
+
+#donna img.show,
+#contact img.show {
+  animation: imageReveal 1s ease-out forwards;
+}
+
+@keyframes imageReveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+
+/* =========================
+   私たちの街を
+========================= */
+
+#watasi {
+  opacity: 0;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 50%,
+    transparent 70%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 50%,
+    transparent 70%
+  );
+  -webkit-mask-size: 100% 300%;
+  mask-size: 100% 300%;
+  -webkit-mask-position: 0 100%;
+  mask-position: 0 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+#watasi.show {
+  opacity: 1;
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+  transition:
+    opacity 0.4s ease,
+    -webkit-mask-position 2s linear,
+    mask-position 2s linear;
+}
+
+
+/* =========================
+   事業内容のカード
+========================= */
+
+#zigyou .d_card,
+#zigyou .r_card {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+#zigyou .d_card.show,
+#zigyou .r_card.show {
+  animation: cardFadeUp 1s ease-out forwards;
+}
+
+/* 右のカードは0.2秒遅らせる */
+#zigyou .r_card.show {
+  animation-delay: 0.2s;
+}
+
+@keyframes cardFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   表・フォーム・説明文
+========================= */
+
+/* 共通の初期状態 */
+#kaisya .company-table,
+#contact .contact-form,
+#donna p,
+#zigyou h3,
+#zigyou .setumei,
+#zinzai > div:not(.event-slider) {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* 表・フォームは30px下から */
+#kaisya .company-table,
+#contact .contact-form {
+  transform: translateY(30px);
+}
+
+/* 説明文は20px下から */
+#donna p,
+#zigyou h3,
+#zigyou .setumei,
+#zinzai > div:not(.event-slider) {
+  transform: translateY(20px);
+}
+
+/* スクロールで表示 */
+#kaisya .company-table.show,
+#contact .contact-form.show,
+#donna p.show,
+#zigyou h3.show,
+#zigyou .setumei.show,
+#zinzai > div:not(.event-slider).show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer .footer-endpoints path {
+  fill: none;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  animation: none;
+  transform: none;
+  filter: none;
+}

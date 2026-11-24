@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>株式会社Ndrive</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/styl.css">
+  <link rel="stylesheet" href="css/denki_sp.css">
+  
+
+  <!--JavaScript -->
+  <script src="js/jquery-4.0.0.min.js" defer></script>
+  <script src="js/swiper-bundle.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+</head>
+
+<body>
+
+  <!-- ーーーーーーーーーーーーーーヘッダーーーーーーーーーーーーーーーーーーーーーーー -->
+  <header>
+
+    <div class="header">
+      <div class="hidari">
+        <a href="index.html" class="logo"><img src="img/ndrive_logo2.png" alt="">
+          <p>株式会社Ndrive</p>
+        </a>
+      </div>
+      <div class="kirikae">
+        <div class="kirikae2"><img src="img/denki_icon.png" alt="">
+          <p>電気通信工事</p>
+        </div>
+        <a href="reform.html" class="kirikae2">
+          <img src="img/ie_icon.png" alt="">
+            <p>深大寺リフォーム &gt;</p>  
+        </a>
+        
+      </div>
+
+      <div class="migi">
+        <div class="btn1"><a href="#contact">お問い合わせ</a></div>
+
+        <nav>
+          <ul>
+            <li><a href="#top">TOP</a></li>
+            <li><a href="#donna">どんな会社？</a></li>
+            <li><a href="#kaisya">会社概要</a></li>
+            <li><a href="#zigyou">事業内容</a></li>
+            <li><a href="#zinzai">人材募集</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+
+
+    <div class="circuit-area">
+
+      <svg class="circuit" viewBox="0 0 1120 540" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+
+        <defs>
+          <!-- 流れる光のぼかし -->
+          <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="7" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+
+          <!-- 四角い光のぼかし -->
+          <filter id="nodeglow" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="13" />
+          </filter>
+        </defs>
+
+        <!-- 白い回路 -->
+        <g class="wire white">
+          <path d="M-30 104 H58 V-30" pathLength="1" />
+          <path d="M-30 150 H108 V250 H231 V415 H444 V296" pathLength="1" />
+          <path d="M177 -30 V41 H241 V113 H353 V231 H587 V57" pathLength="1" />
+          <path d="M491 -30 V54 H397 V180 H428 V231 H524 V295 H606 V373 H826" pathLength="1" />
+          <path d="M-30 322 H113 V390 H201 V454 H380 V550" pathLength="1" />
+          <path d="M220 214 H238 V418 H444" pathLength="1" />
+          <path d="M489 550 V466 H506 V483 H642 V550" pathLength="1" />
+          <path d="M935 550 V397 H993 V360 H1150" pathLength="1" />
+          <path d="M928 550 V394" pathLength="1" />
+        </g>
+
+        <!-- 黄色い回路 -->
+        <g class="wire gold later">
+          <path d="M92 -30 V70 H178 V155 H302 V272 H357 V350 H570 V424 H752 V498 H885 V550" pathLength="1" />
+          <path d="M532 -30 V111 H485 V150" pathLength="1" />
+          <path d="M-30 215 H70 V280 H164 V388" pathLength="1" />
+          <path d="M824 369 V434 H957 V499 H1048 V412 H1150" pathLength="1" />
+        </g>
+
+        <!-- 黄色い回路を流れる光 -->
+        <g class="light">
+          <path d="M92 -30 V70 H178 V155 H302 V272 H357 V350 H570 V424 H752 V498 H885 V550" pathLength="1" />
+          <path d="M532 -30 V111 H485 V150" pathLength="1" />
+          <path d="M-30 215 H70 V280 H164 V388" pathLength="1" />
+          <path d="M824 369 V434 H957 V499 H1048 V412 H1150" pathLength="1" />
+        </g>
+
+        <!-- 白い回路を流れる光 -->
+        <g class="light white-light">
+          <path d="M177 -30 V41 H241 V113 H353 V231 H587 V57" pathLength="1" />
+          <path d="M491 -30 V54 H397 V180 H428 V231 H524 V295 H606 V373 H826" pathLength="1" />
+        </g>
+
+        <!-- 光る四角・小さい点 -->
+        <g class="node">
+
+          <!-- 発光する四角 -->
+          <rect x="164" y="143" width="28" height="28" fill="#ffb52a" filter="url(#nodeglow)" class="pulse" />
+          <rect x="166" y="145" width="24" height="24" fill="#fff" />
+
+          <rect x="414" y="218" width="29" height="29" fill="#ffb52a" filter="url(#nodeglow)" class="pulse" />
+          <rect x="418" y="222" width="22" height="22" fill="#fff" />
+
+          <rect x="811" y="356" width="30" height="30" fill="#ffb52a" filter="url(#nodeglow)" class="pulse" />
+          <rect x="814" y="359" width="23" height="23" fill="#fff" />
+
+          <!-- 枠だけの四角 -->
+          <rect x="99" y="199" width="24" height="24" fill="#0b0b0b" stroke="white" stroke-width="4" />
+          <rect x="476" y="140" width="23" height="23" fill="#0b0b0b" stroke="#ffb52a" stroke-width="4" />
+          <rect x="283" y="346" width="23" height="23" fill="#0b0b0b" stroke="white" stroke-width="4" />
+          <rect x="484" y="409" width="27" height="27" fill="#0b0b0b" stroke="white" stroke-width="5" />
+          <rect x="985" y="355" width="24" height="24" fill="#0b0b0b" stroke="white" stroke-width="5" />
+
+          <!-- 塗りつぶしの四角 -->
+          <rect x="573" y="41" width="23" height="23" fill="white" />
+          <rect x="429" y="290" width="27" height="27" fill="white" />
+          <rect x="920" y="386" width="23" height="23" fill="white" />
+          <rect x="190" y="446" width="29" height="29" fill="#ffb52a" />
+
+          <!-- 白い小さい点 -->
+          <g fill="#f7f5ef">
+            <rect x="292" y="92" width="7" height="7" />
+            <rect x="310" y="92" width="7" height="7" />
+            <rect x="328" y="92" width="7" height="7" />
+
+            <rect x="361" y="374" width="7" height="7" />
+            <rect x="379" y="374" width="7" height="7" />
+            <rect x="397" y="374" width="7" height="7" />
+          </g>
+
+          <!-- 黄色い小さい点 -->
+          <g fill="#ffb52a">
+            <rect x="40" y="232" width="7" height="7" rx="2" />
+            <rect x="40" y="246" width="7" height="7" rx="2" />
+            <rect x="40" y="260" width="7" height="7" rx="2" />
+
+            <rect x="563" y="274" width="7" height="7" rx="2" />
+            <rect x="577" y="274" width="7" height="7" rx="2" />
+            <rect x="591" y="274" width="7" height="7" rx="2" />
+
+            <rect x="768" y="422" width="7" height="7" rx="2" />
+            <rect x="768" y="436" width="7" height="7" rx="2" />
+            <rect x="768" y="450" width="7" height="7" rx="2" />
+          </g>
+
+        </g>
+
+      </svg>
+      <div class="main-text">
+        <p>
+          <span class="kanzi1">確</span>かな<span class="kanzi2">技術</span>で<br>
+          <span class="kanzi1">暮</span>らしを<span class="kanzi2">豊</span>かに
+        </p>
+      </div>
+
+
+    </div>
+    <div id="watasi">
+      <h1>
+        私たちの街を、<br>
+        明るく楽しく<br>
+        住みやすく。</h1>
+      <p>皆様の住環境、<br class="sp-br">働く環境をより良くするため、<br>
+        私たちがサポートいたします。<br>
+        私たちは明るく楽しく住みやすくを実現する為、<br>
+        皆様のご希望を第一に、<br class="sp-br">より良い暮らしをカタチにしていきます。
+      </p>
+    </div>
+
+    <section id="donna">
+      <h2>Ndriveって<br class="sp-br">どんな会社？</h2>
+      <img src="img/pendora.png" alt="">
+      <p>私たちNdriveは皆様の暮らしを明るく楽しく住みやすくするため、リフォーム事業をはじめ、
+        今や暮らしに欠かせない通信インフラの環境整備を主に、2018年に旗揚げしました。<br>
+        　まだまだ小さな会社ですが、メンバーひとりひとりがやる気と責任感を持って日々の業務に邁進しています。<br>
+        　また、メンバーひとりひとりの夢の実現をもう一つのテーマに掲げ、なりたい自分になれる環境を目指して、業種職種にとらわれず常に新しいことにチャレンジする姿勢を持ち続けます。</p>
+    </section>
+
+    <section id="kaisya">
+      <h2>会社概要</h2>
+      <table class="company-table">
+        <tbody>
+          <tr>
+            <th scope="row">社名</th>
+            <td>
+              株式会社Ndrive<br>
+              カブシキガイシャ エヌドライブ
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">所在地</th>
+            <td>
+              <strong>本社</strong><br>
+              〒182-0033<br>
+              東京都調布市富士見町4丁目31-20
+
+              <p>
+                <strong>三鷹事務所</strong><br>
+                〒181-0015<br>
+                東京都三鷹市大沢1-1-35<br>
+                岸テラスハウス西棟
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">法人登録番号</th>
+            <td>
+              法人番号 8012401034378<br>
+              適格請求書発行事業者番号<br>
+              T8012401034378
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">URL</th>
+            <td>
+              <a href="https://ndrive.co.jp">
+                https://ndrive.co.jp
+              </a>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">設立年月</th>
+            <td>2018年8月</td>
+          </tr>
+
+          <tr>
+            <th scope="row">資本金</th>
+            <td>5百万円</td>
+          </tr>
+
+          <tr>
+            <th scope="row">代表者</th>
+            <td>
+              代表取締役<br>
+              中原 雅<br>
+              ナカハラ マサシ
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">従業員数</th>
+            <td>社員6名</td>
+          </tr>
+
+          <tr>
+            <th scope="row">事業内容</th>
+            <td>
+              建築リフォーム事業<br>
+              電気通信工事事業
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">電話番号</th>
+            <td>
+              <a href="tel:0422308929">
+                0422-30-8929
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="zigyou">
+      <h2>事業内容</h2>
+      <h3>
+        Ndriveにできること</h3>
+      <p class="setumei">私たちNdriveは2本の柱を主に、<br class="sp-br">様々な分野に挑戦していきます。
+      </p>
+      <div class="nihon">
+
+  <!-- 電気通信工事 -->
+  <div class="d_card">
+    <h4><img src="img/denki_icon.png" alt="">電気通信工事</h4>
+    <p>
+      通信機器の設置、<br>
+      ケーブル配線、設備点検など<br>
+      パートナー会社様とのお仕事も<br>
+      受け付けております。
+    </p>
+  </div>
+
+  <!-- リフォーム -->
+  <div class="r_card">
+    <h4><img src="img/ie_icon_kuro.png" alt="">住宅・オフィスリフォーム</h4>
+    <p>
+      お住まいや職場、<br>
+      店舗のリフォームを承ります。<br>
+      外構、内装、設備など<br>
+      リフォーム全般を<br>
+      取り扱っておりますので、<br>
+      小さなことから大きなことまで、<br>
+      まずはご相談ください。
+    </p>
+
+    <a href="reform.html" class="reform_btn">
+      深大寺リフォーム　&gt;
+    </a>
+  </div>
+
+</div>
+    </section>
+
+    <section id="zinzai">
+      <h2>人事募集</h2>
+      <div>
+        <p>私たちは夢を持ったやる気ある人材を求めています。<br>
+         職種経験、年齢は問いません、<br>
+          なりたい自分を目指してやる気を持って働ける方の応募をお待ちしております。</p>
+        <p>パソコン業務、車の運転など、未経験の方にもしっかりサポートします。</p>
+       <p>  応募連絡は　<a href="mailto:info@ndrive.co.jp"><img src="img/mail.png" alt="">info@ndrive.co.jp　></a></p>
+       <p>または、　<a href="tel:0422308929"> <img src="img/tel.png" alt="">0422-30-8929　>　</a>まで。</p>
+      </div>
+      <!-- ーーーーーー 社内行事スライダー ーーーーーー -->
+
+<div class="event-slider">
+
+  <!-- 左矢印 -->
+  <button class="yazirusi" type="button" aria-label="前の写真">
+    ＜
+  </button>
+
+  <!-- 写真スライダー -->
+  <div class="swiper event-swiper">
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <img src="img/syasin1.png"社内行事の写真1">
+      </div>
+
+      <div class="swiper-slide">
+        <img src="#" alt="社内行事の写真2">
+      </div>
+
+      <div class="swiper-slide">
+        <img src="#" alt="社内行事の写真3">
+      </div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+
+  </div>
+
+  <!-- 右矢印 -->
+  <button class="yazirusi" type="button" aria-label="次の写真">
+    ＞
+  </button>
+
+</div>
+
+<!-- 写真下のタイトル -->
+<p class="event-caption">社内行事の様子</p>
+    </section>
+
+    <section id="contact">
+      <h2>お問い合わせ</h2>
+      <img src="img/denkoupenti.png" alt="">
+      <form action="#" method="post" class="contact-form">
+
+        <div class="form-item">
+          <label for="name">
+            お名前 <span class="required">※必須</span>
+          </label>
+          <input type="text" id="name" name="name" placeholder="例）山田 太郎" required>
+        </div>
+
+        <div class="form-item">
+          <label for="email">
+            メールアドレス <span class="required">※必須</span>
+          </label>
+          <input type="email" id="email" name="email" placeholder="例）example@ndrive.co.jp" required>
+        </div>
+
+        <div class="form-item">
+          <label for="tel">電話番号</label>
+          <input type="tel" id="tel" name="tel" placeholder="例）090-1234-5678">
+        </div>
+
+        <div class="form-item">
+          <label for="message">
+            お問い合わせ内容
+            <span class="required">※必須</span>
+          </label>
+          <textarea id="message" name="message" rows="8" placeholder="工事のご相談、お見積もり依頼、採用についてなど、お気軽にご記入ください。"
+            required></textarea>
+        </div>
+
+   <div class="privacy">
+  <p>
+      ご入力いただいた個人情報は、お問い合わせへの回答・ご連絡のために使用いたします。
+    その他の目的には使用いたしません。
+  </p>
+</div>
+
+        <button type="submit" class="submit-btn">
+          送信する
+        </button>
+
+      </form>
+    </section>
+
+  </main>
+  
+
+<!-- ーーーーーーーー フッター ーーーーーーーー -->
+
+<footer>
+
+<!-- ーーーー 光るオレンジの配線 ーーーー -->
+<div class="sen">
+
+  <svg viewBox="0 0 1200 260"
+       preserveAspectRatio="none"
+       aria-hidden="true">
+
+    <!-- 光のぼかし -->
+    <defs>
+      <filter id="footerGlow"
+              x="-100%" y="-100%"
+              width="300%" height="300%">
+        <feGaussianBlur stdDeviation="7" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+
+    <!-- オレンジの回路 -->
+    <g class="orenzi">
+      <path d="M-20 155 H240 V215 H420" pathLength="1"/>
+      <path d="M1220 55 H1000 V125 H790 V175 H770" pathLength="1"/>
+    </g>
+
+    <!-- オレンジの流れる光 -->
+    <g class="hikari-orenzi">
+      <path d="M-20 155 H240 V215 H420" pathLength="100"/>
+      <path d="M1220 55 H1000 V125 H790 V175 H770" pathLength="100"/>
+    </g>
+
+    <!-- 回路の先端の四角 -->
+    <g class="footer-endpoints">
+
+      <!-- 左側 -->
+      <path d="M420 215 h0.01"
+            fill="none"
+            stroke="#ffb52a"
+            stroke-width="14"
+            stroke-linecap="square"
+            vector-effect="non-scaling-stroke"/>
+
+      <!-- 右側 -->
+      <path d="M770 175 h0.01"
+            fill="none"
+            stroke="#ffb52a"
+            stroke-width="14"
+            stroke-linecap="square"
+            vector-effect="non-scaling-stroke"/>
+
+    </g>
+
+    <!-- 追加の小さな四角 -->
+    <g class="footer-extra-squares">
+      <rect x="235" y="150"
+            width="12" height="12"
+            fill="#ffb52a"/>
+
+      <rect x="785" y="120"
+            width="12" height="12"
+            fill="#ffb52a"/>
+    </g>
+
+  </svg>
+
+</div>
+
+
+  <!-- Ndriveロゴ -->
+  <img src="img/Ndrive_logo_siro.png"
+       alt="株式会社Ndrive"
+       class="rogo">
+
+  <!-- Nドラくん -->
+  <img src="img/Ndorakun.png"
+       alt=""
+       class="dora">
+
+  <!-- 会社情報 -->
+  <div class="zyouhou">
+    <p>本社　〒182-0033　東京都調布市富士見町4-31-20</p>
+    <p>三鷹事務所　〒181-0015　東京都三鷹市大沢1-1-35</p>
+    <p>TEL　0422-30-8929</p>
+  </div>
+
+  <p class="copyright">
+    &copy; 2026 Ndrive Co., Ltd. All Rights Reserved.
+  </p>
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1586 @@
+/* ーーーーーーーーーーーーリセットーーーーーーーーーーーーーーーーーーーーーー */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+
+
+
+/* ーーーーーーーーーーーーーーーーー全体ーーーーーーーーーーーーーーー */
+
+
+body {
+  margin: 0 auto;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 250, 240, 0.35),
+      rgba(255, 250, 240, 0.35)
+    ),
+    url("../img/kabegami.webp");
+
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+
+h2{
+  font-size: 30px;
+}
+.sp-br {
+  display: none;
+}
+
+#donna,
+#sekou,
+#aisatu{
+  scroll-margin-top: 170px;
+}
+
+/* ーーーーーーーーーーーーーーーーーーーヘッダーーーーーーーーーーーーーーーーーーーーー */
+
+
+/* =========================
+   ヘッダー全体
+========================= */
+
+header {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 15px 15px 8px;
+  overflow: visible;
+}
+
+
+header .header {
+  position: relative;
+  max-width: 1600px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+/* =========================
+   木目＋ライトの画像
+========================= */
+
+header .hari {
+  position: absolute;
+  top: -390px;
+  left: 50%;
+  transform: translateX(-50%);
+width: max(3000px);
+  max-width: none;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 文字・ロゴ・メニューを画像より前に */
+
+header .hidari,
+header .kirikae,
+header .migi {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   ロゴ
+========================= */
+
+header .logo {
+  margin: 0 10px 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+header .logo img {
+  width: 160px;
+  height: auto;
+}
+
+header .logo p {
+  font-size: 14px;
+  margin-top: -3px;
+}
+
+header .logo:hover {
+  opacity: 0.6;
+}
+
+/* =========================
+   左側
+========================= */
+
+header .hidari {
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+  margin-right: 0;
+}
+
+header .hidari::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  border-right: 2px solid #a46b1b;
+}
+
+/* =========================
+   電気通信・リフォーム切り替え
+========================= */
+
+header .kirikae {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+header .kirikae2 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding-left: 15px;
+  gap: 7px;
+}
+
+
+
+header .kirikae2 img {
+  width: 26px;
+  height: auto;
+}
+
+header .kirikae2 p {
+  font-size: 16px;
+}
+
+header .kirikae > .kirikae2:first-child {
+  border-bottom: 2px solid #a46b1b;
+  padding-bottom: 5px;
+}
+
+header .kirikae > .kirikae2:first-child p {
+  letter-spacing: 6px;
+}
+
+/* =========================
+   右側・ナビゲーション
+========================= */
+
+header .migi {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: auto 20px 10px auto;
+  gap: 13px;
+  transform: translateY(7px);
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+header nav a {
+  display: inline-block;
+  border-bottom: 3px solid transparent;
+  font-size: 19px;
+}
+
+header nav a:hover {
+  border-bottom-color: #a46b1b;
+}
+
+/* =========================
+   お問い合わせボタン
+========================= */
+
+header .btn1 a {
+  display: inline-block;
+  background: #744402;
+  color: white;
+  letter-spacing: 5px;
+  padding: 10px 40px;
+  border-radius: 30px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
+}
+
+header .btn1 a:hover {
+  transform: translateY(2px) scale(0.97);
+}
+
+
+
+
+
+/* =========================
+   スクロール時のヘッダー
+========================= */
+
+/* なめらかに変化 */
+header {
+  transition: padding 0.3s ease;
+}
+
+header .logo img,
+header .logo p,
+header .migi,
+header .hari,
+header nav a,
+header .btn1 a {
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   ヘッダー全体
+========================= */
+
+header.scrolled {
+  padding: 0px 15px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   ロゴ・社名
+========================= */
+
+/* ロゴと社名を横並び */
+header.scrolled .logo {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin: 0 50px;
+}
+
+/* ロゴ画像 */
+header.scrolled .logo img {
+  width: 110px;
+}
+
+/* 社名 */
+header.scrolled .logo p {
+  font-size: 14px;
+  margin-top: 10px;
+  white-space: nowrap;
+}
+
+/* ロゴ右側の縦線を消す */
+header.scrolled .hidari::after {
+  display: none;
+}
+
+/* =========================
+   電気通信・リフォーム切り替え
+========================= */
+
+header.scrolled .kirikae {
+  display: none;
+}
+
+/* =========================
+   ナビ・お問い合わせ
+========================= */
+
+/* 横並び */
+header.scrolled .migi {
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  margin: 10px 20px 0 auto;
+  transform: none;
+}
+
+/* ナビを左 */
+header.scrolled nav {
+  order: 1;
+}
+
+/* お問い合わせを右 */
+header.scrolled .btn1 {
+  order: 2;
+}
+
+/* ナビ文字 */
+header.scrolled nav a {
+  font-size: 17px;
+}
+
+/* ナビ同士の間隔 */
+header.scrolled nav ul {
+  gap: 40px;
+}
+
+/* お問い合わせボタン */
+header.scrolled .btn1 a {
+  font-size: 13px;
+  padding: 6px 20px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+/* =========================
+   木目＋ライト
+========================= */
+
+header.scrolled .hari {
+  top: -440px;
+}
+
+
+
+
+
+
+
+/* ーーーーーーーーーーーーーーーーーーメインーーーーーーーーーーーーー */
+
+.main-visual {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.main-visual picture {
+  display: block;
+  width: 100%;
+}
+
+.main-visual picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 65%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    black 85%,
+    transparent 100%
+  );
+}
+
+.main-text {
+  position: absolute;
+  top: 65%;
+  right: 0%;
+  transform: translateY(-50%);
+  z-index: 2;
+  text-align: center;
+background: rgba(255, 255, 255, 0.55);
+  padding: 15px 55px 15px 30px;
+}
+
+.main-text p {
+    font-weight: 600;
+  font-size: clamp(30px, 2.5vw, 45px);
+  letter-spacing: 3px;
+ 
+}
+
+.main-text .kanzi1{
+font-size: clamp(40px, 3.6vw, 66px);
+}
+
+.main-text .kanzi2 {
+  color: #506b1b;
+ font-size: clamp(40px, 3.6vw, 66px);
+}
+
+.main-visual::after {
+  content: "";
+  position: absolute;
+  top: 70%;
+  width:100%;
+  height: 100%;
+  right: 0px;
+  bottom: -30%;
+
+  background-image: url("../img/ha1.png");
+  background-size: auto  clamp(20px, 58vw, 1300px);
+  background-repeat: no-repeat;
+  background-position: right ;
+
+  pointer-events: none;
+  z-index: 3;
+}
+  
+
+
+
+/* ーーーーーー 私たちの街を ーーーーーー */
+
+#watasi {
+  position: relative;
+  width: 100%;
+  padding:  clamp(20px, 12%, 100px) 0 100px  clamp(20px, 15%, 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 大きな見出し */
+#watasi h1 {
+ width: clamp(100px, 60vw, 1000px);
+  margin-top: 50px;
+
+  font-size: clamp(20px, 3vw, 55px);
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 3px;
+  text-align: left;
+}
+
+/* 緑の横線 */
+#watasi h1::after {
+  content: "";
+  display: block;
+
+  width: 50%;
+  height: 4px;
+  margin-top: 30px;
+
+  background: #71834a;
+}
+
+/* 下の説明文 */
+#watasi p {
+  width: clamp(100px, 60vw, 1000px);
+  margin: 50px 0 0 0;
+
+ font-size: clamp(18px, 1.5vw, 25px);
+  line-height: 1.8;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+/* 左側の葉っぱ */
+
+
+#watasi::after {
+  content: "";
+  position: absolute;
+  top: clamp(300px, 10vw, 350px);
+  width:100%;
+  height: 100%;
+  right: 0px;
+  bottom: -20%;
+
+  background-image: url("../img/ha2.png");
+  background-size: auto clamp(20px, 35vw, 700px);
+  background-repeat: no-repeat;
+  background-position: left ;
+
+  pointer-events: none;
+  z-index: 3;
+}
+  
+
+
+
+/* ーーーーーーーーーーーーーーどんなーーーーーーーーーーーーーーーーーー */
+
+#donna{
+    max-width: 1400px;
+position: relative;
+  padding: 100px;
+ margin: clamp(100px, 12vw, 220px) auto 100px;
+}
+
+
+#donna h2 {
+  font-size: clamp(24px, 2vw, 35px);
+  position: absolute;
+
+  top: calc(
+    clamp(700px, 50vw, 1000px) * 0.06
+  );
+
+
+  left: calc(
+  clamp(-200px, -8vw, -30px)
+  + clamp(700px, 50vw, 1000px) * 0.56
+  - clamp(
+      0px,
+      min(100vw - 600px, 680px - 100vw) * 1.5,
+      40px
+    )
+);
+
+transform: translate(
+  calc(-50% - clamp(0px, min(100vw - 600px, 680px - 100vw) * 0.5, 10px)),
+  calc(-1 * clamp(0px, min(100vw - 600px, 680px - 100vw) * 0.25, 5px))
+);
+
+text-align: center;
+white-space: nowrap;
+z-index: 100;
+
+
+}
+
+#donna p {
+  max-width: 85%;
+  margin: 8vw 0 0 8vw;
+  font-size: clamp(18px, 1.3vw, 24px);
+  text-align: left;
+}
+
+
+#donna img {
+  position: absolute;
+  top: 0;
+  left: clamp(-200px, -8vw, -30px);
+  width: clamp(700px, 50vw, 1000px);
+}
+
+
+#donna::after {
+  content: "";
+  position: absolute;
+
+  top: -240px;
+  width: 100vw;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-image: url("../img/ha3.png");
+  background-size: auto clamp(0px, 16vw, 250px);
+  background-repeat: no-repeat;
+  background-position: right center;
+
+  pointer-events: none;
+  z-index: 3;
+}
+
+
+
+
+/* ーーーーーーーーーーーー施工事例ーーーーーーーーーーーーーーーー */
+
+#sekou h2,p{
+  text-align: center;
+}
+
+#sekou h2{
+  font-size: clamp(24px, 2vw, 45px);
+}
+
+#sekou h2::after {
+  content: "";
+  display: block;
+  width: clamp(120px, 10vw, 600px);
+  height: 4px;
+  background: #71834a;
+  margin: 20px auto 0;
+}
+
+#sekou p{
+    margin-top: 35px;
+    margin-bottom: 60px;
+    font-size: clamp(16px, 1.2vw, 20px);
+}
+
+
+#sekou a {
+  display: block;
+  width: fit-content;
+  margin: 60px auto 0;
+  padding: 15px 50px;
+
+  background-color: #596b32;
+  color: white;
+  border-radius: 18px;
+
+  font-size: clamp(16px, 1.3vw, 20px);
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-decoration: none;
+
+  box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+
+  transition: 0.3s;
+}
+
+#sekou a:hover {
+  background-color: #465628;
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+
+
+
+/* ーーーーー 額縁3つを並べる ーーーーー */
+
+#sekou .gakubuti-area {
+  width: 95%;
+  max-width: 1600px;
+  margin: 30px auto;
+
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* ーーーーー 額縁1つのサイズ ーーーーー */
+
+#sekou .gakubuti {
+  flex: 0 0 32%;
+  min-width: 0;
+  width: 32%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ーーーーー Instagramを表示する窓 ーーーーー */
+
+#sekou .mado {
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  width: 80%;
+  height: 76%;
+
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+
+/* ーーーーー Instagramの投稿 ーーーーー */
+
+#sekou .mado .instagram-media {
+  position: static;
+  flex: 0 0 326px;
+
+  width: 326px;
+  min-width: 326px;
+  max-width: 326px;
+
+  margin: -55px 0 0;
+
+  transform: scale(1);
+  transform-origin: top center;
+}
+/* ーーーーー 額縁を一番前に表示 ーーーーー */
+
+#sekou .gakubuti::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("../img/gakubuti.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ーーーーー 施工事例全体 ーーーーー */
+
+#sekou {
+  position: relative;
+}
+
+/* ーーーーー 右側の葉っぱ ーーーーー */
+
+#sekou::after {
+  content: "";
+  position: absolute;
+  top: -460px;
+  width: 100%;
+  height: calc(100% + 315px);
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-image: url("../img/ha4.png");
+  background-size: auto clamp(10px, 40vw, 800px);
+  background-repeat: no-repeat;
+  background-position: right center;
+
+  pointer-events: none;
+  z-index: 3;
+}
+
+
+
+
+/* ーーーーーーーーーーーーーー挨拶ーーーーーーーーーーーーーーーー */
+
+
+
+
+#aisatu {
+  max-width: 1400px;
+  margin: 200px auto;
+  position: relative;
+  height: 900px;
+}
+
+/* 左の写真 */
+#aisatu > img {
+  width: 45%;
+  height: auto;
+  flex-shrink: 0;
+  position:absolute;
+  top: -100px;
+  left: 100px;
+    z-index: 1;
+  isolation: isolate;
+  filter: drop-shadow(8px 8px 0 rgba(113, 131, 74, 0.25));
+}
+
+/* 右の文章全体 */
+#aisatu > div {
+  width: 80%;
+  text-align: left;
+}
+
+
+
+/* 見出し */
+#aisatu h3 {
+  font-size: clamp(20px, 1.3vw, 28px);
+  line-height: 1.8;
+  margin-bottom: 50px;
+  position: absolute;
+  top: 30px;
+  right: clamp(180px, 10%, 1000px);
+}
+
+/* 説明文 */
+#aisatu p {
+  font-size: clamp(16px, 1.2vw, 20px);
+  line-height: 2;
+}
+
+#aisatu h4{
+    position: absolute;
+    top: 160px;
+    right: clamp(60px, 10%, 1000px);
+     border-left: 4px solid #71834a;
+  padding-left: 10px;
+  font-size: clamp(18px, 1.25vw, 24px);
+}
+
+#aisatu .p1{
+    position: absolute;
+    top: 270px;
+    right: 15%;
+}
+
+#aisatu .p2{
+    position: absolute;
+    top: 460px;
+    right: clamp(150px, 5vw, 300px);
+}
+
+#aisatu .p3{
+    position: absolute;
+    top: 650px;
+    right: 10%;
+}
+
+/* 代表の名前 */
+#aisatu .p4 {
+  position: absolute;
+  top: 800px;
+  right: 10%;
+  text-align: right;
+}
+
+
+
+/* ーーーーー ha5 左側の葉っぱ ーーーーー */
+
+#contact {
+  position: relative;
+}
+
+#contact::before {
+  content: "";
+  position: absolute;
+  top: -59%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100vw;
+  height: 100%;
+
+  background-image: url("../img/ha5.png");
+  background-size: auto 34vw;
+  background-repeat: no-repeat;
+  background-position: left center;
+
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ーーーーーーーーーーーーーーー問い合わせーーーーーーーーーーーーーーー */
+
+
+#contact {
+  max-width: 1400px;
+  margin: 100px auto;
+  padding: 50px;
+  display: grid;
+  
+  gap: 50px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+/* 見出し */
+#contact > h2 {
+  grid-column: 1;
+  text-align: left;
+  grid-column: 1 / -1;
+  white-space: nowrap;
+transform: rotate(-10deg);
+margin-left: 10%;
+
+}
+
+/* 電話 */
+#contact .denwa {
+  grid-column: 2;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 20%;
+  margin-top: 30px;
+}
+
+#contact .denwa p {
+  margin: 3px 0 0;
+  text-align: right;
+  font-size: clamp(15px,1.4vw, 18px);
+}
+
+#contact .denwa p:first-of-type {
+    white-space: nowrap;
+    margin-top: 12px;
+}
+
+
+
+
+#contact .tel-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 35px;
+  background: #596b32;
+  color: white;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: clamp(20px, 1.6vw, 45px);
+  font-family: sans-serif;
+  letter-spacing: 2px;
+    box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.3);
+     transition: 0.2s;
+  
+}
+
+
+#contact .tel-btn:hover {
+  transform: translateY(4px);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+#contact .tel-btn:active {
+  transform: translateY(6px);
+  box-shadow: none;
+}
+
+
+
+#contact .tel-btn img {
+  width: 20px;
+}
+
+/* お悩み一覧 */
+#contact .nayami {
+  grid-column: 1;
+  margin: 30px auto 0 45%;
+}
+
+#contact .nayami p{
+    text-align: left;
+    line-height: 35px;
+    white-space: nowrap;
+    font-size: clamp(18px, 1.6vw, 22px);
+}
+
+#contact .nayami .dai{
+    font-size: 22px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+/* 家の画像 */
+#contact > img {
+  grid-column: 2;
+  width: 600px;
+  margin: 120px 30% 0 0;
+  transform: translateX(-40%);
+  max-width: none;
+}
+
+/* フォーム */
+#reform-contact {
+  grid-column: 1 / -1;
+}
+
+#contact > h2 {
+  position: relative;
+}
+
+#contact > h2::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  bottom: 100%;
+  left: 25%;
+  transform: rotate(7deg);
+
+  background-image: url("../img/pyon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+
+
+/* ーーーーー お問い合わせフォーム ーーーーー */
+
+
+#reform-contact {
+  width: 100%;
+  padding: 50px 0;
+   min-width: 0;
+}
+
+/* 見出し */
+#reform-contact h2 {
+  font-size: clamp(20px, 2vw, 40px);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  width: fit-content;
+  margin: 20px auto 50px auto;
+}
+
+#reform-contact h2 img{
+width: 30px;
+height: 30px;
+}
+
+
+/* フォーム全体 */
+.reform-form {
+   width: 100%;
+  max-width: 600px;
+  min-width: 0;
+  margin: 0 auto;
+}
+
+/* 各項目 */
+.reform-form .form-group {
+  margin-bottom: 20px;
+}
+
+/* 項目名 */
+.reform-form label,
+.reform-form legend {
+  display: block;
+  font-size: clamp(16px, 1.2vw, 20px);
+  font-weight: bold;
+  margin-bottom: 1px;
+  font-family: sans-serif;
+}
+
+/* 必須 */
+.reform-form .required {
+  color: #3c3c3c;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+/* 入力欄 */
+.reform-form input[type="text"],
+.reform-form input[type="email"],
+.reform-form input[type="tel"] {
+  display: block;
+  width: 350px;
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: white;
+  font-size: 16px;
+    box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* 物件の種類 */
+.reform-form .property-type {
+  border: none;
+  padding: 0;
+  
+}
+
+.reform-form .property-type label {
+  display: block;
+  font-size: clamp(16px, 1.2vw, 20px);
+  font-weight: normal;
+  margin: 5px 0;
+}
+
+/* ラジオボタン */
+.reform-form input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* お問い合わせ内容 */
+.reform-form textarea {
+  display: block;
+  width: 600px;
+  max-width: 100%;
+  height: 300px;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: white;
+font-size: clamp(16px, 1.2vw, 20px);
+}
+
+/* 送信ボタン */
+.reform-form .reform-submit {
+  display: block;
+  margin: 50px auto 0;
+  padding: 12px 60px;
+
+  background: #596b32;
+  color: white;
+  border: none;
+  border-radius: 40px;
+font-family: sans-serif;
+ font-size: clamp(18px, 1.3vw, 20px);
+  letter-spacing: 3px;
+  cursor: pointer;
+
+  box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+.reform-submit {
+  transition: 0.2s;
+}
+
+.reform-submit:hover {
+  transform: translateY(4px);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.reform-form .privacy p {
+  text-align: left;
+}
+
+#contact{
+  position: relative;
+}
+
+
+
+
+
+/* ーーーーー ha6 右側の葉っぱ ーーーーー */
+
+#contact::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  width: 100vw;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-image: url("../img/ha6.png");
+  background-size: auto clamp(100px, 80vw, 1300px);
+  background-repeat: no-repeat;
+  background-position: right center;
+
+  pointer-events: none;
+  z-index: 3;
+}
+
+
+
+
+
+
+
+/* ーーーーーーーーーーーーーーーーーー フッター ーーーーーーーーーーーーーー */
+
+footer {
+  position: relative;
+  width: 100%;
+  padding: 120px 10% 80px;
+
+background-image: url("../img/kosikabe.png");
+background-size: 100% 100%;
+background-position: center ;
+background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Ndriveロゴ */
+footer .rogo {
+  width: 200px;
+}
+
+/* Nドラくん */
+footer .dora {
+  position: absolute;
+  width: 130px;
+  top: -113px;
+  right: 8%;
+  bottom: 100%;
+}
+
+/* 会社情報 */
+footer .zyouhou {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* コピーライト */
+footer .copyright {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ーーーーーーーーーーーーーーーーーーーアニメーションーーーーーーーーーーーーー */
+
+
+
+/* ーーーーー 文字アニメーション ーーーーー */
+
+.main-text p {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 40%,
+    transparent 60%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 40%,
+    transparent 60%,
+    transparent 100%
+  );
+
+  -webkit-mask-size: 100% 300%;
+  mask-size: 100% 300%;
+
+  animation: textReveal 2s ease-in-out forwards;
+}
+
+@keyframes textReveal {
+  from {
+    -webkit-mask-position: 0 70%;
+    mask-position: 0 70%;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+
+
+
+
+
+
+/* ーーーーー アニメーション ーーーーー */
+
+/* h1とpに共通するマスク設定 */
+#watasi h1,
+#watasi p {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 40%,
+    transparent 60%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 40%,
+    transparent 60%,
+    transparent 100%
+  );
+
+  -webkit-mask-size: 100% 300%;
+  mask-size: 100% 300%;
+}
+
+/* h1：2秒後に登場 */
+#watasi h1 {
+  animation: watasiReveal 2.5s ease-in-out 0.6s both;
+}
+
+/* p：3.5秒後に登場 */
+#watasi p {
+  animation: watasiReveal 3s ease-in-out 1.5s both;
+}
+
+/* 上から下へふわっと表示 */
+@keyframes watasiReveal {
+  from {
+    -webkit-mask-position: 0 100%;
+    mask-position: 0 100%;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+
+/* ーーーーー どんな・ペンドラ アニメーション ーーーーー */
+
+/* 最初は隠す */
+#donna h2,
+#donna img {
+  clip-path: inset(0 100% 0 0);
+}
+
+/* 左から徐々に表示 */
+#donna h2.show,
+#donna img.show {
+  animation: imageReveal 1s ease-out forwards;
+}
+
+@keyframes imageReveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+
+
+/* ーーーーー どんなの文章 ふわっと表示 ーーーーー */
+
+#donna p {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#donna p.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* ーーーーー 施工事例 スクロールアニメーション ーーーーー */
+
+/* 見出し・説明文 */
+#sekou h2.reveal,
+#sekou > p.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#sekou h2.reveal.is-visible,
+#sekou > p.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 額縁 */
+#sekou .gakubuti.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#sekou .gakubuti.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+
+
+
+
+
+/* Instagramボタン */
+
+#sekou > a {
+  opacity: 0;
+  translate: 0 30px;
+}
+
+/* 見出しが表示されたら、遅れてボタン登場 */
+#sekou:has(h2.is-visible) > a {
+  animation: instaUp 1s ease 1.5s both;
+}
+
+@keyframes instaUp {
+  from {
+    opacity: 0;
+    translate: 0 30px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+
+
+/* ーーーーー 他のセクションもふわっと登場 ーーーーー */
+
+/* 代表挨拶 */
+#aisatu > img,
+#aisatu h3,
+#aisatu h4,
+#aisatu .p1,
+#aisatu .p2,
+#aisatu .p3,
+#aisatu .p4,
+
+/* お問い合わせ */
+#contact > h2,
+#contact .denwa,
+#contact .nayami,
+
+/* お問い合わせフォーム */
+#reform-contact h2,
+#reform-contact .form-group,
+#reform-contact .reform-submit {
+  opacity: 0;
+  translate: 0 30px;
+  transition:
+    opacity 1s ease,
+    translate 1s ease;
+}
+
+/* スクロールで表示 */
+#aisatu > img.is-visible,
+#aisatu h3.is-visible,
+#aisatu h4.is-visible,
+#aisatu .p1.is-visible,
+#aisatu .p2.is-visible,
+#aisatu .p3.is-visible,
+#aisatu .p4.is-visible,
+
+#contact > h2.is-visible,
+#contact .denwa.is-visible,
+#contact .nayami.is-visible,
+
+#reform-contact h2.is-visible,
+#reform-contact .form-group.is-visible,
+#reform-contact .reform-submit.is-visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
+
+/* HA1： */
+
+@keyframes ha1Sway {
+  0%, 100% {
+    transform: skewY(0deg);
+  }
+
+  50% {
+    transform: skewY(5deg);
+  }
+}
+
+.main-visual::after {
+  transform-origin: right center;
+  animation: ha1Sway 6s ease-in-out infinite;
+}
+
+
+/* HA2*/
+
+@keyframes ha2Sway {
+  0%, 100% {
+    transform: skewY(0deg);
+  }
+
+  50% {
+    transform: skewY(-3deg);
+  }
+}
+
+#watasi::after {
+  transform-origin: left center;
+  animation: ha2Sway 3s ease-in-out infinite;
+}
+
+
+
+/* HA3：右側を固定して左側が上下にしなる */
+
+@keyframes ha3Sway {
+  0%, 100% {
+    transform: translateX(-50%) skewY(0deg);
+  }
+
+  50% {
+    transform: translateX(-50%) skewY(8deg);
+  }
+}
+
+#donna::after {
+  transform-origin: right center;
+  animation: ha3Sway 2s ease-in-out infinite;
+}
+
+
+
+/* HA4：右側を固定して左側が上下にしなる */
+
+@keyframes ha4Sway {
+  0%, 100% {
+    transform: translateX(-50%) skewY(0deg);
+  }
+
+  50% {
+    transform: translateX(-50%) skewY(5deg);
+  }
+}
+
+#sekou::after {
+  transform-origin: right center;
+  animation: ha4Sway 4.8s ease-in-out infinite;
+}
+
+
+
+/* HA5：左側を固定して右側が上下にしなる */
+
+@keyframes ha5Sway {
+  0%, 100% {
+    transform: translateX(-50%) skewY(0deg);
+  }
+
+  50% {
+    transform: translateX(-50%) skewY(-4deg);
+  }
+}
+
+#contact::before {
+  transform-origin: left center;
+  animation: ha5Sway 5.2s ease-in-out infinite;
+}
+
+
+
+/* HA6：右側を固定して左側が上下にしなる */
+
+@keyframes ha6Sway {
+  0%, 100% {
+    transform: translateX(-50%) skewY(0deg);
+  }
+
+  50% {
+    transform: translateX(-50%) skewY(3deg);
+  }
+}
+
+#contact::after {
+  transform-origin: right center;
+  animation: ha6Sway 4.6s ease-in-out infinite;
+}
+

@@ -1,0 +1,1061 @@
+@media screen and (max-width: 767px) {
+  
+.sp-br {
+  display: inline;
+}
+
+h2{
+    font-size: 24px;
+    letter-spacing: 4px;
+}
+    
+body {
+  overflow-x: clip;
+}
+
+
+
+
+  
+
+/* ===== スマホ版ヘッダー ===== */
+
+
+
+
+header,
+header.scrolled {
+  width: 100%;
+  padding: 5px 10px;
+  margin: 0;
+}
+
+/* ヘッダー全体を2段にする */
+header .header {
+  display: grid;
+  grid-template-columns: 115px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-items: center;
+  width: 100%;
+  gap: 0;
+}
+
+
+header .hari,
+header.scrolled .hari {
+  display: block;
+  content: url("../img/hari_sumaho.png");
+
+  position: absolute;
+  width: 1900px;
+  max-width: none;
+  height: auto;
+
+  top: -295px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* 切り替えメニューを非表示 */
+header .kirikae,
+header.scrolled .kirikae {
+  display: none;
+}
+
+/* ===== ロゴ ===== */
+
+header .hidari {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+header .hidari::after {
+  display: none;
+}
+
+header .logo,
+header.scrolled .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+}
+
+header .logo img,
+header.scrolled .logo img {
+  width: 100px;
+}
+
+header .logo p,
+header.scrolled .logo p {
+  font-size: 12px;
+  margin: -3px 0 0;
+  white-space: nowrap;
+}
+
+/* ===== 右側 ===== */
+
+header .migi,
+header.scrolled .migi {
+  grid-column: 2;
+  grid-row: 1 / 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  gap: 5px;
+  transform: none;
+}
+
+/* ===== お問い合わせ ===== */
+
+header .btn1,
+header.scrolled .btn1 {
+  order: 1;
+}
+
+header .btn1 a,
+header.scrolled .btn1 a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 25px;
+  margin-top: 6px;
+
+  background: #744402;
+  color: white;
+  border: 1px solid #744402;
+  border-radius: 30px;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* ===== ナビゲーション ===== */
+
+header nav,
+header.scrolled nav {
+  order: 2;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul,
+header.scrolled nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* 深大寺リフォームとは非表示 */
+header nav li:nth-child(2) {
+  display: none;
+}
+
+header nav li {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  text-align: center;
+  border: none;
+}
+
+/* ナビ文字 */
+header nav a,
+header.scrolled nav a {
+  display: block;
+  width: 100%;
+  padding: 3px 0;
+
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+  border: none;
+}
+
+/* 縦線 */
+header nav li:nth-child(3),
+header nav li:nth-child(4) {
+  border-left: 2px solid #c0a178;
+}
+
+/* ホバー */
+header nav a:hover,
+header nav a:focus-visible {
+  border: none;
+  transform: none;
+}
+
+/* ーーーーーーーーーーーーーーーーーーメインーーーーーーーーーーーーーーーーーー */
+
+
+.main-text {
+  position: absolute;
+  top: 110%;
+  right: 55%;
+  transform: translateY(-50%);
+  z-index: 100;
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+
+  background: transparent;
+  padding: 25px 15px;
+}
+
+.main-text p {
+  font-weight: 600;
+  font-size: 25px;
+  letter-spacing: 3px;
+  line-height: 1.5;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.main-text .kanzi1 {
+  font-size: 35px;
+}
+
+.main-text .kanzi2 {
+  color: #506b1b;
+  font-size: 36px;
+}
+
+
+.main-visual::after {
+  content: "";
+  position: absolute;
+  top: 90%;
+  width:100%;
+  height: 100%;
+  right: -50px;
+  bottom: -30%;
+
+  background-image: url("../img/ha1.png");
+  background-size: auto 150%;
+  background-repeat: no-repeat;
+  background-position: right ;
+
+  pointer-events: none;
+  z-index: 3;
+}
+
+
+
+
+
+
+
+/* ーーーーーー 私たち ーーーーーー */
+
+#watasi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 60% auto 70px;
+  padding: 0;
+}
+
+/* 見出し */
+#watasi h1 {
+  font-size: clamp(24px, 6vw, 34px);
+  line-height: 1.5;
+  border-right: none;
+  border-left: none;
+  padding: 0 ;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+
+
+/* 緑の横線 */
+#watasi h1::after {
+  content: "";
+  display: block;
+
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  height: 3px;
+  margin-top: 20px;
+
+  background: #71834a;
+}
+
+
+/* 説明文 */
+#watasi p {
+  font-size: clamp(15px, 3vw, 20px);
+  line-height: 1.8;
+  width: fit-content;
+  max-width: 70%;
+  margin: 25px auto 0;
+  text-align: left;
+}
+
+
+  
+/* 左側の葉っぱ */
+
+
+#watasi::after {
+  content: "";
+  position: absolute;
+  top: calc(55% - clamp(0px, (100vw - 430px) * 0.17, 57px));
+  width:100%;
+  height: 100%;
+  right: 20%;
+  bottom: -20%;
+  transform: rotate(15deg);
+  background-image: url("../img/ha2.png");
+  background-size: auto 50vw;
+  background-repeat: no-repeat;
+  background-position: left ;
+
+  pointer-events: none;
+  z-index: -1;
+}
+  
+
+
+/* ーーーーー ha5 ーーーーー */
+
+#contact::before {
+  top: -60%;
+  background-size: auto 40vw;
+  background-position: left center;
+}
+
+
+/* ーーーーーー お問い合わせーーーーー */
+
+#contact {
+  width: 90%;
+  max-width: 100%;
+  margin: 200px auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* お問い合わせ見出し */
+#contact > h2 {
+  width: fit-content;
+  max-width: 80%;
+  margin: -70px 0 20px;
+  align-self: flex-start;
+  text-align: center;
+  letter-spacing: 0;
+  font-size: 18px;
+
+  transform: translate(
+    clamp(0px, (100vw - 615px) * 0.4, 35px),
+    clamp(0px, (100vw - 615px) * 0.7, 50px)
+  ) rotate(-10deg);
+}
+
+/* 見出しの飾り */
+#contact > h2::before {
+  width: 60px;
+  height: 35px;
+  left: 70%;
+}
+
+/* 電話 */
+#contact .denwa {
+  grid-column: auto;
+  align-self: flex-end;
+  justify-self: auto;
+  margin-right: 3%;
+  margin-top: -15px;
+}
+
+#contact .denwa p {
+  font-size: 13px;
+}
+
+#contact .denwa p:first-of-type {
+  white-space: normal;
+  margin-top: 12px;
+}
+
+/* 電話ボタン */
+#contact .tel-btn {
+  font-size: 16px;
+  padding: 12px 25px;
+  gap: 8px;
+}
+
+#contact .tel-btn img {
+  width: 18px;
+}
+
+#contact .nayami {
+  grid-column: auto;
+  width: fit-content;
+  max-width: 100%;
+  margin: 20px auto 0;
+  position: relative;
+  z-index: 1;
+}
+
+#contact .nayami p {
+  font-size: 14px;
+  line-height: 2;
+  white-space: normal;
+  text-align: left;
+}
+
+#contact .nayami .dai {
+  font-size: 18px;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+/* 家の画像 */
+#contact > img {
+  position: absolute;
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+
+  top: 330px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  opacity: 0.35;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+
+
+
+/* ーーーーーー お問い合わせフォーム ーーーーーー */
+
+#reform-contact {
+  grid-column: auto;
+  width: 100%;
+  min-width: 0;
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+
+#reform-contact h2 {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: calc(
+  140px + clamp(0px, (100vw - 486px) * 0.3, 60px)
+) auto 40px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+
+  transform: translateY(
+    clamp(0px, (100vw - 486px) * 0.2, 40px)
+  );
+}
+
+#reform-contact h2 img {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin: -10px -1px 0 0;
+}
+
+/* フォーム全体 */
+.reform-form {
+  width: 85%;
+  min-width: 0;
+  margin: 0 auto;
+}
+
+/* 各項目 */
+.reform-form .form-group {
+  margin-bottom: 15px;
+}
+
+/* 項目名 */
+.reform-form label,
+.reform-form legend {
+  font-size: 14px;
+}
+
+/* 入力欄 */
+.reform-form input[type="text"],
+.reform-form input[type="email"],
+.reform-form input[type="tel"] {
+  width: 100%;
+  max-width: 100%;
+  padding: 5px 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+
+}
+
+/* お問い合わせ内容 */
+.reform-form textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  padding: 5px 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* 送信ボタン */
+.reform-form .reform-submit {
+  margin: 40px auto 0;
+  padding: 10px 50px;
+  font-size: 15px;
+  max-width: 100%;
+}
+
+/* プライバシーポリシー */
+.reform-form .privacy p {
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+
+
+  #contact::after {
+    top: -40px;     /* 上下の位置 */
+    left: 53%;     /* 左右の位置 */
+  }
+
+
+/* ーーーーーーーーーーーーーフッターーーーーーーーーーーーーーーーーーー*/
+
+
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  min-height: 250px;
+  height: auto;
+
+  padding: 5px 5% 1px;
+  gap: 15px;
+
+
+}
+
+footer .rogo,
+footer .dora,
+footer .zyouhou,
+footer .copyright {
+  position: static;
+  transform: none;
+  margin: 0;
+}
+
+/* ロゴ */
+footer .rogo {
+  width: 110px;
+  position: absolute;
+  top: 8px;
+}
+
+/* Nドラくん */
+footer .dora {
+  width: 75px;
+  position: absolute;
+  top: -65px;
+}
+
+/* 会社情報 */
+footer .zyouhou {
+  margin-top: 50px;
+  font-size: 13px;
+}
+
+/* コピーライト */
+footer .copyright {
+  margin-top: 10px;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+
+
+  
+/* ーーーーーー 施工事例ーーーーーー */
+
+/* 横スライドするエリア */
+#sekou .gakubuti-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  max-width: none;
+  gap: 15px;
+
+  margin: 30px auto ;
+  padding: 10px 10%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 10%;
+
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+#sekou p{
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* スクロールバーを非表示 */
+#sekou .gakubuti-area::-webkit-scrollbar {
+  display: none;
+}
+
+/* 額縁1枚の大きさ */
+#sekou .gakubuti {
+  position: relative;
+
+  flex: 0 0 80%;
+  width: 80%;
+  min-width: 0;
+
+  height: auto;
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+  scroll-snap-align: center;
+}
+
+/* Instagramを表示する窓 */
+#sekou .mado {
+  position: absolute;
+
+  top: 12%;
+  left: 10%;
+
+  width: 80%;
+  height: 76%;
+
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Instagramの埋め込み */
+#sekou .mado .instagram-media {
+  position: static;
+
+  flex: 0 0 326px;
+  width: 326px;
+  min-width: 326px;
+  max-width: 326px;
+
+  margin: -55px 0 0;
+  transform: scale(0.75);
+  transform-origin: top center;
+}
+
+/* 木の額縁 */
+#sekou .gakubuti::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("../img/gakubuti.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+  z-index: 2;
+}
+
+
+
+#sekou a {
+  
+  margin: 40px auto 90px;
+  padding: 12px 35px;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.3);
+
+  transition: 0.3s;
+}
+
+
+
+
+
+
+/* ーーーーーー 代表挨拶ーーーーーー */
+
+#aisatu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin: 0 auto ;
+  padding: 0;
+}
+
+/* 文章を包むdivのレイアウトを解除 */
+#aisatu > div {
+  display: contents;
+}
+
+
+/* 初めまして、中原雅志です */
+#aisatu h3 {
+  order: 1;
+  position: absolute;
+
+top: calc(60px + 80vw * 0.6);
+right: 5%;
+
+  width: auto;
+  margin: 0;
+
+  font-size: 17px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  text-align: right;
+  color: #302517;
+  font-weight: 600;
+  z-index: 3;
+
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+
+
+/* 名前 */
+#aisatu h3 span {
+  font-size: 19px;
+  letter-spacing: 2px;
+
+}
+
+
+
+/* 写真 */
+#aisatu > img {
+  order: 2;
+  position: static;
+  width: 80%;
+  height: auto;
+  margin: -90px auto  45px 0;
+  filter: drop-shadow(90px 100px 0 rgba(113, 131, 74, 0.25));
+}
+
+/* 小見出し */
+#aisatu h4 {
+  order: 3;
+  position: static;
+  margin: 0 0  20px 5%;
+text-align: left;
+ align-self: flex-start;
+ white-space: nowrap;
+ font-size: 15px;
+}
+
+/* 挨拶文 */
+#aisatu .p1,
+#aisatu .p2,
+#aisatu .p3,
+#aisatu .p4 {
+  position: static;
+  width: 90%;
+  margin: 0 0 20px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+#aisatu .p1 { order: 4; }
+#aisatu .p2 { order: 5; }
+#aisatu .p3 { order: 6; }
+
+
+#aisatu p {
+  font-size: 14px;
+  line-height: 2;
+}
+
+
+/* 代表の名前 */
+#aisatu .p4 {
+  order: 7;
+  text-align: right;
+  font-size: 16px;
+  margin: 20px 16% 0 0;
+}
+
+  
+}
+
+
+
+
+/* ーーーーーー 中間サイズ ーーーーーー */
+
+@media screen and (min-width: 768px) and (max-width: 999px) {
+
+  .sp-br {
+  display: inline;
+}
+
+
+   /* 深大寺リフォームとはを非表示 */
+  header nav li:nth-child(2) {
+    display: none;
+  }
+
+  /* ヘッダーの文字を折り返さない */
+  header .kirikae2 p,
+  header nav a,
+  header .btn1 a {
+    white-space: nowrap;
+  }
+
+  /* ナビの間隔を狭くする */
+  header nav ul {
+    gap: 25px;
+  }
+
+  /* ヘッダー内の要素が縮められるようにする */
+  header .migi {
+    min-width: 0;
+  }
+
+
+
+  header .hari,
+header.scrolled .hari {
+  display: block;
+  content: url("../img/hari_sumaho.png");
+
+  position: absolute;
+  width: 2500px;
+  max-width: none;
+  height: auto;
+
+  top: -375px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 通常時 */
+header .hari {
+  transform: translateX(-50%) scaleY(1);
+  transform-origin: center center;
+}
+
+/* スクロール時 */
+header.scrolled .hari {
+  transform: translateX(-50%) scaleY(0.5);
+  transform-origin: center center;
+  top: -390px;
+}
+
+
+
+
+  /* お問い合わせセクションを下げる */
+#contact {
+  margin-top: 200px;
+}
+
+/* お悩みの文章を左に寄せる */
+#contact .nayami {
+  margin-left: 15%;
+}
+
+/* 家のイラストを左下に移動 */
+#contact > img {
+  transform: translate(-50%, 40px);
+}
+
+/* 挨拶の横にある葉っぱ */
+#contact::before {
+  top: -55%;
+}
+
+/* お問い合わせ見出しと装飾を左へ */
+#contact > h2 {
+  margin-left: 0;
+  transform: translateX(60px) rotate(-10deg);
+}
+
+/* チョンチョンの装飾だけ右へ */
+#contact > h2::before {
+  left: 35%;
+}
+
+
+
+/* 挨拶の小見出しと最初の文章を上へ */
+#aisatu h4 {
+  transform: translateY(-80px);
+}
+
+#aisatu .p1,
+#aisatu .p2,
+#aisatu .p3 {
+  transform: translateY(-80px);
+}
+
+
+/* 施工事例：中間幅だけInstagramを拡大 */
+  #sekou .mado .instagram-media {
+    transform: scale(1.3);
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+
+/* ーーーーーー どんな会社 ーーーーーー */
+
+#donna {
+  position: relative;
+  width: 100%;
+  padding: 60px 20px;
+  margin-bottom: 0px;
+
+}
+
+/* 見出し */
+#donna h2 {
+  letter-spacing: 0;
+  line-height: 1.1;
+  top: -1px;
+  left: calc(-30px + 420px * 0.48);
+  transform: translateX(-50%);
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+/* ペンドラ画像 */
+#donna img {
+  width: 370px;
+  max-width: none;
+  height: auto;
+  position: absolute;
+  top: -20px;
+  left: -40px;
+  opacity: 0.8;
+}
+
+/* 説明文 */
+#donna p {
+    width: 80%;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 20px auto ;
+}
+
+
+#sekou::after {
+  content: "";
+  position: absolute;
+  top: -290px;
+  width: 100vw;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-image: url("../img/ha4.png");
+  background-size: auto 50vw;
+  background-repeat: no-repeat;
+  background-position: right center;
+
+  pointer-events: none;
+  z-index: 3;
+}
+
+
+}
+
+
+
+
+
+
