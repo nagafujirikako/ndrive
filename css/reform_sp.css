@@ -905,7 +905,7 @@ text-align: left;
 
 
 
-  header .hari,
+  /* header .hari,
 header.scrolled .hari {
   display: block;
   content: url("../img/hari_sumaho.png");
@@ -915,23 +915,25 @@ header.scrolled .hari {
   max-width: none;
   height: auto;
 
+
+  
   top: -750px;
   left: 50%;
   transform: translateX(-50%);
-}
+} */
 
 /* 通常時 */
-header .hari {
+/* header .hari {
   transform: translateX(-50%) scaleY(1);
   transform-origin: center center;
-}
+} */
 
 /* スクロール時 */
-header.scrolled .hari {
+/* header.scrolled .hari {
   transform: translateX(-50%) scaleY(0.5);
   transform-origin: center center;
   top: -390px;
-}
+} */
 
 
 
